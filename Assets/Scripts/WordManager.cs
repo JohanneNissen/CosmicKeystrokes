@@ -22,6 +22,8 @@ public class WordManager : MonoBehaviour
         Debug.Log("Base: " + basep);
         Debug.Log("FingerPe: " + fingerp);
         Debug.Log("rowP: " + rowP);
+
+        algo.calculateComplexity("rumskib");
     }
 
     // Update is called once per frame

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 [Serializable]
 public class Key
 {
@@ -101,13 +102,54 @@ public class WordComplexityAlgorithm
         return key.rowpenalty;
     }
 
-    public float calculateComplexity(string word, string json)
+    public float calculateComplexity(string word)
     {
-        /*for (int i = 0; i + 3 <= word.Length; i++)
+        float strokepenalty = 0;
+        float keypenalty = 0;
+
+        for (int k = 0; k < word.Length; k++)
+        {
+            float penalty = getBasePenalty(word[k].ToString()) + getFingerPenalty(word[k].ToString()) + getRowPenalty(word[k].ToString());
+            keypenalty += penalty;
+        }
+
+        for (int i = 0; i + 3 <= word.Length; i++)
         {
             string triad = word.Substring(i, 3);
             Debug.Log(triad);
-        }*/
-        return 1;
+            string key1 = triad.Substring(0, 1);
+            string key2 = triad.Substring(1, 1);
+            string key3 = triad.Substring(2, 1);
+
+            int[] Phand = new int[3] { getHand(key1), getHand(key2), getHand(key3)};
+            int[] Pfinger = new int[3] {getFinger(key1), getFinger(key2), getFinger(key3)};
+            int[] Prow = new int[3] {getRowPenalty(key1), getRowPenalty(key2), getRowPenalty(key3)};
+
+            string Chand = $"{Phand[0]}{Phand[1]}{Phand[2]}";
+            Debug.Log(Chand);
+            switch (Chand)
+            {
+                case "112":
+                case "122":
+                case "211":
+                case "221":
+                    strokepenalty += 0;
+                    break;
+                case "121":
+                case "212":
+                    strokepenalty += 1;
+                    break;
+                case "111":
+                case "222":
+                    strokepenalty += 2;
+                    break;
+                default:
+                    Debug.Log("Unhandled combination");
+                    break;
+            }
+        }
+        
+        Debug.Log("result: " + strokepenalty);
+        return strokepenalty;
     }
 }
