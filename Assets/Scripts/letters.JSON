@@ -1,0 +1,7 @@
+{
+  "keys": [
+    {"name": "a", "hand": 1, "finger": 0, "row": 2},
+    {"name": "b", "hand": 1, "finger": 3, "row": 1},
+    {"name": "c", "hand": 1, "finger": 2, "row": 1}
+    ]
+}
