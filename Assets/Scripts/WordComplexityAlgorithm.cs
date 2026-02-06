@@ -8,6 +8,9 @@ public class Key
     public int hand;
     public int finger;
     public int row;
+    public float basepenalty;
+    public int fingerpenalty;
+    public int rowpenalty;
 }
 
 [Serializable]
@@ -65,15 +68,46 @@ public class WordComplexityAlgorithm
         return key.row;
     }
 
+    public float getBasePenalty(string letter)
+    {
+        if (!keysDic.TryGetValue(letter, out Key key))
+        {
+            Debug.LogWarning($"Key {letter} not found");
+            return -1;
+        }
+
+        return key.basepenalty;
+    }
+
+    public int getFingerPenalty(string letter)
+    {
+        if (!keysDic.TryGetValue(letter, out Key key))
+        {
+            Debug.LogWarning($"Key {letter} not found");
+            return -1;
+        }
+
+        return key.fingerpenalty;
+    }
+
+    public int getRowPenalty(string letter)
+    {
+        if (!keysDic.TryGetValue(letter, out Key key))
+        {
+            Debug.LogWarning($"Key {letter} not found");
+            return -1;
+        }
+
+        return key.rowpenalty;
+    }
+
     public float calculateComplexity(string word, string json)
     {
-        return 1;
-    }
-    
-}
-
-/*for (int i = 0; i + 3 <= word.Length; i++)
+        /*for (int i = 0; i + 3 <= word.Length; i++)
         {
             string triad = word.Substring(i, 3);
             Debug.Log(triad);
         }*/
+        return 1;
+    }
+}

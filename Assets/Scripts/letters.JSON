@@ -1,7 +1,33 @@
 {
   "keys": [
-    {"name": "a", "hand": 1, "finger": 0, "row": 2},
-    {"name": "b", "hand": 1, "finger": 3, "row": 1},
-    {"name": "c", "hand": 1, "finger": 2, "row": 1}
-    ]
+    {"name": "a", "hand": 1, "finger": 0, "row": 2, "basepenalty": 0, "fingerpenalty": 3, "rowpenalty": 0},
+    {"name": "b", "hand": 1, "finger": 3, "row": 1, "basepenalty": 3.5, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "c", "hand": 1, "finger": 2, "row": 1, "basepenalty": 2, "fingerpenalty": 1, "rowpenalty": 1},
+    {"name": "d", "hand": 1, "finger": 2, "row": 2, "basepenalty": 0, "fingerpenalty": 1, "rowpenalty": 0},
+    {"name": "e", "hand": 1, "finger": 2, "row": 3, "basepenalty": 2, "fingerpenalty": 1, "rowpenalty": 1},
+    {"name": "f", "hand": 1, "finger": 3, "row": 2, "basepenalty": 0, "fingerpenalty": 0, "rowpenalty": 0},
+    {"name": "g", "hand": 1, "finger": 3, "row": 2, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 0},
+    {"name": "h", "hand": 2, "finger": 6, "row": 2, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 0},
+    {"name": "i", "hand": 2, "finger": 7, "row": 3, "basepenalty": 2, "fingerpenalty": 1, "rowpenalty": 1},
+    {"name": "j", "hand": 2, "finger": 6, "row": 2, "basepenalty": 0, "fingerpenalty": 0, "rowpenalty": 0},
+    {"name": "k", "hand": 2, "finger": 7, "row": 2, "basepenalty": 0, "fingerpenalty": 1, "rowpenalty": 0},
+    {"name": "l", "hand": 2, "finger": 8, "row": 2, "basepenalty": 0, "fingerpenalty": 2, "rowpenalty": 0},
+    {"name": "m", "hand": 2, "finger": 6, "row": 1, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "n", "hand": 2, "finger": 6, "row": 1, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "o", "hand": 2, "finger": 8, "row": 3, "basepenalty": 2, "fingerpenalty": 2, "rowpenalty": 1},
+    {"name": "p", "hand": 2, "finger": 9, "row": 3, "basepenalty": 2, "fingerpenalty": 3, "rowpenalty": 1},
+    {"name": "q", "hand": 1, "finger": 0, "row": 3, "basepenalty": 2, "fingerpenalty": 3, "rowpenalty": 1},
+    {"name": "r", "hand": 1, "finger": 3, "row": 3, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "s", "hand": 1, "finger": 1, "row": 2, "basepenalty": 0, "fingerpenalty": 2, "rowpenalty": 0},
+    {"name": "t", "hand": 1, "finger": 3, "row": 3, "basepenalty": 2.5, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "u", "hand": 2, "finger": 6, "row": 3, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "v", "hand": 1, "finger": 3, "row": 1, "basepenalty": 2, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "w", "hand": 1, "finger": 1, "row": 3, "basepenalty": 2, "fingerpenalty": 2, "rowpenalty": 1},
+    {"name": "x", "hand": 1, "finger": 1, "row": 1, "basepenalty": 2, "fingerpenalty": 2, "rowpenalty": 1},
+    {"name": "y", "hand": 2, "finger": 6, "row": 3, "basepenalty": 3, "fingerpenalty": 0, "rowpenalty": 1},
+    {"name": "z", "hand": 1, "finger": 0, "row": 2, "basepenalty": 2, "fingerpenalty": 3, "rowpenalty": 1},
+    {"name": "æ", "hand": 2, "finger": 9, "row": 2, "basepenalty": 0, "fingerpenalty": 3, "rowpenalty": 0},
+    {"name": "ø", "hand": 2, "finger": 9, "row": 2, "basepenalty": 2, "fingerpenalty": 3, "rowpenalty": 0},
+    {"name": "å", "hand": 2, "finger": 9, "row": 3, "basepenalty": 2.5, "fingerpenalty": 3, "rowpenalty": 1}
+  ]
 }
