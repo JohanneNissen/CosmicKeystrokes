@@ -23,7 +23,8 @@ public class WordManager : MonoBehaviour
         Debug.Log("FingerPe: " + fingerp);
         Debug.Log("rowP: " + rowP);
 
-        algo.calculateComplexity("rumskib");
+        float result = algo.calculateComplexity("rumskib");
+        Debug.Log("complexity: " + result);
     }
 
     // Update is called once per frame
