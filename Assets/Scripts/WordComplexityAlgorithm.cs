@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -137,7 +136,7 @@ public class WordComplexityAlgorithm
         return f1 == f2 && f1 == f3;
     }
 
-    public float calculateComplexity(string word)
+    public double calculateComplexity(string word)
     {
         //penalties
         float strokepenalty = 0;
@@ -258,43 +257,43 @@ public class WordComplexityAlgorithm
                 Debug.Log("SP 0: " + triad);
             }
             //Penalty of 1:
-            if (TwoSameKey && TwoSameFinger && MonotonicF)
+            else if (TwoSameKey && TwoSameFinger && MonotonicF)
             {
                 strokepenalty += 1;
                 Debug.Log("SP 1: " + triad);
             }
             //Penalty of 3:
-            if (AllDiffKeys && AllDiffFingers && !MonotonicF)
+            else if (AllDiffKeys && AllDiffFingers && !MonotonicF)
             {
                 strokepenalty += 3;
                 Debug.Log("SP 3: " + triad);
             }
             //Penalty of 4:
-            if (TwoSameFinger && AllDiffKeys && !MonotonicF)
+            else if (TwoSameFinger && AllDiffKeys && !MonotonicF)
             {
                 strokepenalty += 4;
                 Debug.Log("SP 4: " + triad);
             }
             //Penalty of 5:
-            if (AllSameFinger && TwoSameKey)
+            else if (AllSameFinger && TwoSameKey)
             {
                 strokepenalty += 5;
                 Debug.Log("SP 5: " + triad);
             }
             //Penalty of 6:
-            if (TwoSameFinger && AllDiffKeys && MonotonicF)
+            else if (TwoSameFinger && AllDiffKeys && MonotonicF)
             {
                 strokepenalty += 6;
                 Debug.Log("SP 6: " + triad);
             }
             //Penalty of 7:
-            if (AllSameFinger && AllDiffKeys)
+            else if (AllSameFinger && AllDiffKeys)
             {
                 strokepenalty += 7;
                 Debug.Log("SP 7: " + triad);
             }
             //Penalty of 2:
-            if (AllDiffFingers && AllDiffKeys)
+            else if (AllDiffFingers && AllDiffKeys)
             {
                 strokepenalty += 2;
                 Debug.Log("SP 2: " + triad);
@@ -303,10 +302,10 @@ public class WordComplexityAlgorithm
             {
                 Debug.Log("Triad does not fit stroke options: " + triad);
             }
-            Debug.Log("");
+            Debug.Log("Triad: " + triad + " cfinger: " + Cfinger);
         }
 
         Debug.Log("result: SP: " + strokepenalty + " KP: " + keypenalty + " RP: " + rowpenalty + " HP: " + handpenalty);
-        return strokepenalty + rowpenalty + keypenalty + handpenalty;
+        return (strokepenalty * 0.3) + (rowpenalty * 0.3) + keypenalty + handpenalty;
     }
 }
