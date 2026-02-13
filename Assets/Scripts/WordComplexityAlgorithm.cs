@@ -114,7 +114,7 @@ public class WordComplexityAlgorithm
 
     public bool Monotonic (int f1, int f2, int f3)
     {
-        return (f1 > f2 && f2 > f3) || (f1 < f2 && f2 < f3);
+        return (f1 >= f2 && f2 >= f3) || (f1 <= f2 && f2 <= f3);
     }
 
     public bool KeyTwoSame (string key1, string key2, string key3)
@@ -305,7 +305,7 @@ public class WordComplexityAlgorithm
             Debug.Log("Triad: " + triad + " cfinger: " + Cfinger);
         }
 
-        Debug.Log("result: SP: " + strokepenalty + " KP: " + keypenalty + " RP: " + rowpenalty + " HP: " + handpenalty);
+        Debug.Log("result: SP: " + (strokepenalty * 0.3) + " KP: " + keypenalty + " RP: " + (rowpenalty * 0.3) + " HP: " + handpenalty);
         return (strokepenalty * 0.3) + (rowpenalty * 0.3) + keypenalty + handpenalty;
     }
 }
