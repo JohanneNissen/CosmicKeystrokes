@@ -7,11 +7,15 @@ public class WordManager : MonoBehaviour
     
     void Start()
     {
+        string[] words = new string[5] {"prøve", "", "", "", ""};
         algo = new WordComplexityAlgorithm();
         algo.KeyDataStore(wordjson.text);
 
-        double result = algo.calculateComplexity("bih");
-        Debug.Log("complexity: " + result);
+        foreach (string word in words)
+        {
+            double result = algo.calculateComplexity(word);
+            Debug.Log(word + " complexity: " + result);
+        }
     }
 
     // Update is called once per frame
