@@ -7,14 +7,12 @@ public class ScrollUV : MonoBehaviour
  
     void Update()
     {
+
         MeshRenderer mr = GetComponent<MeshRenderer>();
-
         Material mat = mr.material;
-
         Vector2 offset = mat.mainTextureOffset;
 
         offset.y = transform.position.z / transform.localScale.z / parralax;
-
         mat.mainTextureOffset = offset;
 
 
