@@ -1,7 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Game2Manager : MonoBehaviour
+public class PathManager : MonoBehaviour
 {
+    public List<GameObject> path;
+    public bool isBlocked;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
