@@ -48,7 +48,6 @@ public class Game2Manager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            //input.text.Remove(input.text.Length - 1, 1);
             if (input.text == yellow.word)
             {
                 Debug.Log("yellow word was correct");
