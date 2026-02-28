@@ -2560,7 +2560,7 @@ MonoBehaviour:
   yellowText: {fileID: 2120250625}
   blueText: {fileID: 893617299}
   greenText: {fileID: 867509094}
-  input: {fileID: 325732302}
+  inputField: {fileID: 325732302}
 --- !u!4 &1722152848
 Transform:
   m_ObjectHideFlags: 0

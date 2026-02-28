@@ -348,6 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 793838731}
   - component: {fileID: 793838732}
+  - component: {fileID: 793838733}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -383,6 +384,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WordManager
   wordjson: {fileID: 4900000, guid: afe6eb452d93e934aa2af65a4a30a0f8, type: 3}
+--- !u!114 &793838733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793838730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b316a850654ea4c947c2ebdbe20c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HashTest
+  pairlist:
+  - word: 
+    audio: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

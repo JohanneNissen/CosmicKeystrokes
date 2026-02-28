@@ -1,9 +1,9 @@
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Game2Manager : MonoBehaviour
 {
@@ -13,18 +13,23 @@ public class Game2Manager : MonoBehaviour
     public TMP_Text yellowText;
     public TMP_Text blueText;
     public TMP_Text greenText;
-    public TMP_InputField input;
+    public TMP_InputField inputField;
 
     colorWord yellow;
     colorWord blue;
     colorWord green;
 
-    //int currentWaypoint = 0;
+    private string typedword = "";
 
     public class colorWord
     {
         public string word;
         public TMP_Text textBox;
+    }
+
+    void Awake()
+    {
+        inputField.onValidateInput += ValidateChar;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -46,29 +51,58 @@ public class Game2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (EventSystem.current.currentSelectedGameObject == inputField.gameObject && Input.GetKeyDown(KeyCode.Space))
         {
-            if (input.text == yellow.word)
+            SubmitInput();
+            if (typedword == yellow.word)
             {
                 Debug.Log("yellow word was correct");
+                GetSingleWord(yellow, temp);
             }
-            else if (input.text == blue.word)
+            else if (typedword == blue.word)
             {
                 Debug.Log("Blue word was correct");
+                GetSingleWord(blue, temp);
             }
-            else if (input.text == green.word)
+            else if (typedword == green.word)
             {
                 Debug.Log("Green word was correct");
+                GetSingleWord(green, temp);
             }
             else
             {
                 Debug.Log("The word was not correct");
             }
-            
-            GetNewWords(temp);
         }
     }
 
+    private char ValidateChar(string text, int charindex, char addchar)
+    {
+        if (addchar == ' ')
+        {
+            return '\0';
+        }
+        
+        return addchar;
+    }
+    void SubmitInput()
+    {
+        typedword = inputField.text;
+        inputField.text = "";
+    }
+
+    void GetSingleWord(colorWord cw, string[] words)
+    {
+        string chosenWord;
+        do
+        {
+            int num = UnityEngine.Random.Range(0, words.Length);
+            chosenWord = words[num];
+        } while (chosenWord == yellow.word || chosenWord == blue.word || chosenWord == green.word);
+
+        cw.textBox.text = chosenWord;
+        cw.word = chosenWord;
+    }
     void GetNewWords(string[] words)
     {
         List<string> usedwords = new List<string>();
