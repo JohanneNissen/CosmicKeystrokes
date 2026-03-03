@@ -5,9 +5,14 @@ public class Loadscene : MonoBehaviour
 
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("enter");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player entered the base!");
+
+            
+        }
     }
 
 }
