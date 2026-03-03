@@ -14,13 +14,13 @@ public class G1ManagerScript : MonoBehaviour
         source = gameObject.GetComponent<AudioSource>();
     }
 
-    private void Start()
+    /*private void Start()
     {
         StartCoroutine(PlayNextWord());
-    }
+    }*/
 
 
-    IEnumerator PlayNextWord()
+    /*IEnumerator PlayNextWord()
     {
         source.clip = næsteOrd;
         source.Play();
@@ -29,21 +29,21 @@ public class G1ManagerScript : MonoBehaviour
         source.clip = ord.GetAudio(GenerateWord());
 
         source.Play();
-    }
+    }*/
 
    
 
-    void ReplayCurrentWord()
+   /* void ReplayCurrentWord()
     {
 
 
-    }
+    }/*
     
 
-    string GenerateWord()
+    /*string GenerateWord()
     {
 
-    }
+    }*/
 
 
 }
