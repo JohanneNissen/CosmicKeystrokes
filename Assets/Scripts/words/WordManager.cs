@@ -7,7 +7,7 @@ public class WordManager : MonoBehaviour
     
     void Start()
     {
-        string[] words = new string[5] {"prøve", "", "", "", ""};
+        string[] words = new string[25] {"bogreol", "kuglepen", "skoletaske", "vækkeur", "køleskab", "kalender", "mikroovn", "drikkedunk", "tandbørste", "tandpasta", "håndklæde", "brusebad", "badekar", "støvler", "håndvask", "bamse", "skraldespand", "brætspil", "nøgle", "lommelygte", "kost", "ledning", "sæbe", "skål", "gryde"};
         algo = new WordComplexityAlgorithm();
         algo.KeyDataStore(wordjson.text);
 
