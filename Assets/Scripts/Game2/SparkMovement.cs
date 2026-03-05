@@ -29,6 +29,7 @@ public class SparkMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             DetermineDestination();
+            Debug.Log("is moving: " + isMoving);
         }
 
         if (isMoving == true)
@@ -51,6 +52,7 @@ public class SparkMovement : MonoBehaviour
             currentWP = destination;
             currentWPmanager = destination.GetComponent<WaypointManager>();
             current = destination.GetComponent<WaypointManager>().number;
+            Debug.Log(currentWP + " and " + currentWPmanager + " and " + isMoving);
             return;
         }
 
@@ -61,6 +63,7 @@ public class SparkMovement : MonoBehaviour
         {
             index++;
         }
+        Debug.Log("moving active: " + isMoving);
     }
     void DetermineDestination()
     {
