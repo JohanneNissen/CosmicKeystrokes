@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class Game2Manager : MonoBehaviour
 {
-    string[] temp = new string[15] {"hej", "mor", "far", "nej", "skole", "job", "cykel", "hund", "kat", "hest", "ged", "gris", "får", "kanin", "fugl"};
     public WordGenerator wordgenerator;
     colorWord[] colorwords;
     public int minCom;
@@ -67,21 +66,18 @@ public class Game2Manager : MonoBehaviour
             SubmitInput();
             if (typedword == yellow.word)
             {
-                Debug.Log("yellow word was correct");
                 MoveObstacles(ObstacleManager.GroupColor.Yellow);
                 yellow.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
                 yellow.textBox.text = yellow.word;
             }
             else if (typedword == blue.word)
             {
-                Debug.Log("Blue word was correct");
                 MoveObstacles(ObstacleManager.GroupColor.Blue);
                 blue.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
                 blue.textBox.text = blue.word;
             }
             else if (typedword == green.word)
             {
-                Debug.Log("Green word was correct");
                 MoveObstacles(ObstacleManager.GroupColor.Green);
                 green.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
                 green.textBox.text = green.word;
