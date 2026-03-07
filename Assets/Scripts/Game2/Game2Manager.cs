@@ -8,7 +8,11 @@ using UnityEngine.UI;
 public class Game2Manager : MonoBehaviour
 {
     string[] temp = new string[15] {"hej", "mor", "far", "nej", "skole", "job", "cykel", "hund", "kat", "hest", "ged", "gris", "får", "kanin", "fugl"};
+    public WordGenerator wordgenerator;
     colorWord[] colorwords;
+    public int minCom;
+    public int maxCom;
+    public List<string> usedwords;
 
     public TMP_Text yellowText;
     public TMP_Text blueText;
@@ -20,6 +24,8 @@ public class Game2Manager : MonoBehaviour
     colorWord green;
 
     private string typedword = "";
+
+    ObstacleManager[] obstacles;
 
     public class colorWord
     {
@@ -44,8 +50,13 @@ public class Game2Manager : MonoBehaviour
         green.textBox = greenText;
 
         colorwords = new colorWord[3] { yellow, blue, green };
+        foreach (var cw in colorwords)
+        {
+            cw.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+            cw.textBox.text = cw.word;
+        }
 
-        GetNewWords(temp);
+        obstacles = FindObjectsByType<ObstacleManager>(FindObjectsSortMode.None);
     }
 
     // Update is called once per frame
@@ -57,21 +68,38 @@ public class Game2Manager : MonoBehaviour
             if (typedword == yellow.word)
             {
                 Debug.Log("yellow word was correct");
-                GetSingleWord(yellow, temp);
+                MoveObstacles(ObstacleManager.GroupColor.Yellow);
+                yellow.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                yellow.textBox.text = yellow.word;
             }
             else if (typedword == blue.word)
             {
                 Debug.Log("Blue word was correct");
-                GetSingleWord(blue, temp);
+                MoveObstacles(ObstacleManager.GroupColor.Blue);
+                blue.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                blue.textBox.text = blue.word;
             }
             else if (typedword == green.word)
             {
                 Debug.Log("Green word was correct");
-                GetSingleWord(green, temp);
+                MoveObstacles(ObstacleManager.GroupColor.Green);
+                green.word = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                green.textBox.text = green.word;
             }
             else
             {
                 Debug.Log("The word was not correct");
+            }
+        }
+    }
+
+    public void MoveObstacles(ObstacleManager.GroupColor color)
+    {
+        foreach (ObstacleManager obj in obstacles)
+        {
+            if (obj.group == color)
+            {
+                obj.ObsMoveStart();
             }
         }
     }
@@ -91,7 +119,7 @@ public class Game2Manager : MonoBehaviour
         inputField.text = "";
     }
 
-    void GetSingleWord(colorWord cw, string[] words)
+    /*void GetSingleWord(colorWord cw, string[] words)
     {
         string chosenWord;
         do
@@ -119,5 +147,5 @@ public class Game2Manager : MonoBehaviour
             cw.word = chosenWord;
             usedwords.Add(chosenWord);
         }
-    }
+    }*/
 }

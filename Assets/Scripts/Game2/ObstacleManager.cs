@@ -8,6 +8,7 @@ public class ObstacleManager : MonoBehaviour
 
     public GameObject obstacle;
     public GameObject connectedPath;
+    public GroupColor group;
 
     public Vector3 posClose;
     public Vector3 posOpen;
@@ -15,6 +16,13 @@ public class ObstacleManager : MonoBehaviour
     private bool IsMoving;
 
     public int speed = 100;
+
+    public enum GroupColor
+    {
+        Blue,
+        Green,
+        Yellow
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,12 +41,7 @@ public class ObstacleManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            IsMoving = true;
-        }
-        
+    {        
         if (IsMoving == true)
         {
             if (closed == false)
@@ -65,5 +68,10 @@ public class ObstacleManager : MonoBehaviour
                 connectedPath.GetComponent<PathManager>().isBlocked = true;
             }
         }
+    }
+
+    public void ObsMoveStart()
+    {
+        IsMoving = true;
     }
 }

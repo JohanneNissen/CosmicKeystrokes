@@ -12,7 +12,7 @@ public class WordGenerator : MonoBehaviour
     public class Word
     {
         public string word;
-        public float complexity;
+        public float Complexity;
     }
 
     [Serializable]
@@ -44,11 +44,11 @@ public class WordGenerator : MonoBehaviour
 
         foreach (var word in allWords)
         {
-            if (word.complexity < Cmin)
+            if (word.Complexity < Cmin)
             {
                 continue;
             }
-            if (word.complexity > Cmax)
+            if (word.Complexity > Cmax)
             {
                 break;
             }
