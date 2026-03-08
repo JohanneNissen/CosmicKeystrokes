@@ -1,13 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class G1ManagerScript : MonoBehaviour
 {
     
     public AudioSource source;
-    public HashTest ord;
-    public AudioClip næsteOrd;
+    public AudioClip nextwordAU;
+    public AudioClip currentwordAU;
 
     public ScrollUV starfieldFront;
     public G1Timer timer;
@@ -15,12 +18,24 @@ public class G1ManagerScript : MonoBehaviour
     public ParticleSystem flameEffect;
     private ParticleSystem.MainModule flameMain;
 
+    public WordGenerator wordgenerator;
+    public HashTest hashtest;
+    public string currentWord;
+    private string typedword;
+    public int minCom;
+    public int maxCom;
+    public List<string> usedwords;
 
+    public TMP_InputField inputField;
+    public bool gameRunning;
 
     private void Awake()
     {
-        ord = gameObject.GetComponent<HashTest>();
+        hashtest = gameObject.GetComponent<HashTest>();
+        wordgenerator = gameObject.GetComponent<WordGenerator>();
         source = gameObject.GetComponent<AudioSource>();
+
+        inputField.onValidateInput += ValidateChar;
 
         if (flameEffect != null)
             flameMain = flameEffect.main;
@@ -28,22 +43,91 @@ public class G1ManagerScript : MonoBehaviour
 
     private void Start()
     {
-        //StartCoroutine(PlayNextWord());
+        currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+        FocusInputField();
+        StartCoroutine(PlayNextWord());
+        gameRunning = true;
     }
 
     private void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.W))
-        { 
-         IncreaseSpeed();
-        
+        if (!inputField.isFocused)
+        {
+            FocusInputField();
         }
 
+        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
+        {
+            if (gameRunning == false)
+            {
+                return;
+            }
+            ReplayCurrentWord();
+        }
 
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        {
+            if (gameRunning == false)
+            {
+                return;
+            }
+            currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+            StartCoroutine(PlayNextWord());
+        }
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            SubmitInput();
+            if (typedword == currentWord)
+            {
+                Debug.Log("word was correct");
+                IncreaseSpeed();
+                if (maxCom < 60)
+                {
+                    minCom++;
+                    maxCom++;
+                }
+                currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                StartCoroutine(PlayNextWord());
+            }
+            else
+            {
+                Debug.Log("incorrect word");
+                DecreaseSpeed();
+                if (minCom >= 10)
+                {
+                    minCom--;
+                    maxCom--;
+                }
+                currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                StartCoroutine(PlayNextWord());
+            }
+        }
+        if (gameRunning == false)
+        {
+            inputField.gameObject.SetActive(false);
+        }
     }
 
+    private char ValidateChar(string text, int charindex, char addchar)
+    {
+        if (addchar == ' ')
+        {
+            return '\0';
+        }
+
+        return addchar;
+    }
+    void SubmitInput()
+    {
+        typedword = inputField.text;
+        inputField.text = "";
+    }
+    void FocusInputField()
+    {
+        inputField.ActivateInputField();
+        inputField.Select();
+    }
 
     void IncreaseSpeed()
     {
@@ -70,35 +154,24 @@ public class G1ManagerScript : MonoBehaviour
         {
             starfieldFront.parralax = 12f;
         }
-
-
     }
 
 
-    /*IEnumerator PlayNextWord()
+    IEnumerator PlayNextWord()
     {
-        source.clip = n�steOrd;
+        /*source.clip = nextwordAU;
+        source.Play();*/
+        yield return new WaitForSeconds(.2f);
+        currentwordAU = hashtest.GetAudio(currentWord);
+        source.clip = currentwordAU;
+
         source.Play();
-        yield return new WaitForSeconds(.5f);
+    }
 
-        source.clip = ord.GetAudio(GenerateWord());
 
+    void ReplayCurrentWord()
+    {
+        source.clip = currentwordAU;
         source.Play();
-    }*/
-
-   
-
-    /*void ReplayCurrentWord()
-    {
-
-
-    }*/
-    
-
-    /*string GenerateWord()
-    {
-
-    }*/
-
-
+    }
 }

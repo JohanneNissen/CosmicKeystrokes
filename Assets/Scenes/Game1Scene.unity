@@ -119,6 +119,496 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &104191620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104191621}
+  - component: {fileID: 104191623}
+  - component: {fileID: 104191622}
+  m_Layer: 5
+  m_Name: tilbagetekst
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &104191621
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104191620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5127, y: 1.5127, z: 1.5127}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2042927325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -283, y: -10}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &104191622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104191620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Tryk p\xE5 mellemrum for at g\xE5 til menuen"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -448.994, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &104191623
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104191620}
+  m_CullTransparentMesh: 1
+--- !u!1 &333544260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 333544261}
+  - component: {fileID: 333544263}
+  - component: {fileID: 333544262}
+  m_Layer: 5
+  m_Name: EndScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &333544261
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333544260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.4851, y: 2.4851, z: 2.4851}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2042927325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -196, y: 194}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &333544262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333544260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "Tillykke, du har rejst: 1700 lys\xE5r!\n"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: -186.96991, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &333544263
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333544260}
+  m_CullTransparentMesh: 1
+--- !u!1 &456832615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 456832618}
+  - component: {fileID: 456832617}
+  - component: {fileID: 456832616}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &456832616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456832615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.UI.InputSystemUIInputModule
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
+--- !u!114 &456832617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456832615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventSystem
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &456832618
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 456832615}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &512053386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 512053387}
+  - component: {fileID: 512053389}
+  - component: {fileID: 512053388}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &512053387
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512053386}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2012859735}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &512053388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512053386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\u200B"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 3
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 1
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &512053389
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512053386}
+  m_CullTransparentMesh: 1
 --- !u!114 &675498920 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1550780752638749068, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
@@ -162,6 +652,399 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5862520c7b1c6534f95e7bdf06766dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScrollUV
+--- !u!1 &1692634545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1692634546}
+  - component: {fileID: 1692634549}
+  - component: {fileID: 1692634548}
+  - component: {fileID: 1692634547}
+  m_Layer: 5
+  m_Name: Placeholder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1692634546
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692634545}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2012859735}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1692634547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692634545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.LayoutElement
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
+--- !u!114 &1692634548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692634545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 2164260863
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.5}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 3
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 1
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1692634549
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1692634545}
+  m_CullTransparentMesh: 1
+--- !u!1 &1733639245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733639246}
+  - component: {fileID: 1733639249}
+  - component: {fileID: 1733639248}
+  - component: {fileID: 1733639247}
+  m_Layer: 5
+  m_Name: InputField
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1733639246
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733639245}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.0158765, y: 1.8152, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2012859735}
+  m_Father: {fileID: 2042927325}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -455}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1733639247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733639245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da0c512f12947e489f739169773d7ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TMP_InputField
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1733639248}
+  m_TextViewport: {fileID: 2012859735}
+  m_TextComponent: {fileID: 512053388}
+  m_Placeholder: {fileID: 1692634548}
+  m_VerticalScrollbar: {fileID: 0}
+  m_VerticalScrollbarEventHandler: {fileID: 0}
+  m_LayoutGroup: {fileID: 0}
+  m_ScrollSensitivity: 1
+  m_ContentType: 0
+  m_InputType: 0
+  m_AsteriskChar: 42
+  m_KeyboardType: 0
+  m_LineType: 0
+  m_HideMobileInput: 0
+  m_HideSoftKeyboard: 0
+  m_CharacterValidation: 0
+  m_RegexValue: 
+  m_GlobalPointSize: 14
+  m_CharacterLimit: 0
+  m_OnEndEdit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSubmit:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnDeselect:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnTextSelection:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnEndTextSelection:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnTouchScreenKeyboardStatusChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_CustomCaretColor: 0
+  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
+  m_Text: 
+  m_CaretBlinkRate: 0.85
+  m_CaretWidth: 1
+  m_ReadOnly: 0
+  m_RichText: 1
+  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_OnFocusSelectAll: 1
+  m_ResetOnDeActivation: 1
+  m_KeepTextSelectionVisible: 0
+  m_RestoreOriginalTextOnEscape: 1
+  m_isRichTextEditingAllowed: 0
+  m_LineLimit: 0
+  isAlert: 0
+  m_InputValidator: {fileID: 0}
+  m_ShouldActivateOnSelect: 1
+--- !u!114 &1733639248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733639245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1733639249
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733639245}
+  m_CullTransparentMesh: 1
+--- !u!1 &2012859734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012859735}
+  - component: {fileID: 2012859736}
+  m_Layer: 5
+  m_Name: Text Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2012859735
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012859734}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1692634546}
+  - {fileID: 512053387}
+  m_Father: {fileID: 1733639246}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.5}
+  m_SizeDelta: {x: -20, y: -13}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2012859736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012859734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
+  m_Padding: {x: -8, y: -5, z: -8, w: -5}
+  m_Softness: {x: 0, y: 0}
+--- !u!224 &2042927325 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7804263723437733978, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+  m_PrefabInstance: {fileID: 218896603278536627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2051588103
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,21 +1181,69 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: backtext
+      value: 
+      objectReference: {fileID: 104191622}
+    - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 333544262}
+    - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: startTime
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: managerScript
+      value: 
+      objectReference: {fileID: 218896603278536635}
+    - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: distanceCounter
+      value: 
+      objectReference: {fileID: 675498920}
+    - target: {fileID: 3444186195093155910, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: timer
       value: 
       objectReference: {fileID: 675498925}
     - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: maxCom
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: minCom
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 218896603278536633}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: hashtest
+      value: 
+      objectReference: {fileID: 218896603278536630}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: starfield
       value: 
       objectReference: {fileID: 1448516334}
     - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: inputField
+      value: 
+      objectReference: {fileID: 1733639247}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: nextwordAU
+      value: 
+      objectReference: {fileID: 8300000, guid: 5779965c412773d4e876ae6f28db7c63, type: 3}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: flameEffect
       value: 
       objectReference: {fileID: 1107985913}
+    - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: wordgenerator
+      value: 
+      objectReference: {fileID: 218896603278536629}
     - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: starfieldFront
       value: 
@@ -368,12 +1299,779 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4534986634375194132, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7804263723437733978, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1733639246}
+    - targetCorrespondingSourceObject: {fileID: 7804263723437733978, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333544261}
+    - targetCorrespondingSourceObject: {fileID: 7804263723437733978, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 104191621}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 693493922908302108, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 218896603278536630}
+    - targetCorrespondingSourceObject: {fileID: 693493922908302108, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 218896603278536629}
   m_SourcePrefab: {fileID: 100100000, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+--- !u!1 &218896603278536628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 693493922908302108, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+  m_PrefabInstance: {fileID: 218896603278536627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &218896603278536629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218896603278536628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badbd8f904eb6ae4e8f07cabaacc1511, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WordGenerator
+  wordJSON: {fileID: 4900000, guid: e56ec5e87f8d22243ba1e5da18a90d9d, type: 3}
+--- !u!114 &218896603278536630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218896603278536628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81b316a850654ea4c947c2ebdbe20c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HashTest
+  pairlist:
+  - word: aflevering
+    audio: {fileID: 8300000, guid: 8443860805f0a9745a3c071a710dc03d, type: 3}
+  - word: aften
+    audio: {fileID: 8300000, guid: a7703c59a9e5cb040931b0ba08c5210b, type: 3}
+  - word: aftensmad
+    audio: {fileID: 8300000, guid: 282dd72c4bcd4864e8b656869683ddce, type: 3}
+  - word: agurk
+    audio: {fileID: 8300000, guid: 1148540ac45101948a749cd24834faa4, type: 3}
+  - word: aldrig
+    audio: {fileID: 8300000, guid: b587ed464fb4b4348a121e611d2a4ed8, type: 3}
+  - word: altid
+    audio: {fileID: 8300000, guid: 042da500ef7d04e46bcbff978f28cee3, type: 3}
+  - word: ambulance
+    audio: {fileID: 8300000, guid: 8f14ada948060984c935cb9fb96e3a3c, type: 3}
+  - word: anvende
+    audio: {fileID: 8300000, guid: 7b0e36efbd4d33843898cd4abe32380e, type: 3}
+  - word: appelsin
+    audio: {fileID: 8300000, guid: 2a73746ba276f4149b68c8d0ff18409f, type: 3}
+  - word: avis
+    audio: {fileID: 8300000, guid: f7ba4952b90b3f6499412f992e781d65, type: 3}
+  - word: badekar
+    audio: {fileID: 8300000, guid: d2fd7e0029b454c408a663fab5bdf382, type: 3}
+  - word: bakke
+    audio: {fileID: 8300000, guid: e494ec127a23ac340af20d9f8f5afc48, type: 3}
+  - word: bamse
+    audio: {fileID: 8300000, guid: 0f936de4c1374834ab49ff6a43523822, type: 3}
+  - word: banan
+    audio: {fileID: 8300000, guid: da4530d6d4b2880438cec84bab030d00, type: 3}
+  - word: bedstefar
+    audio: {fileID: 8300000, guid: f4bf89b8abea2d94cbb206043143809c, type: 3}
+  - word: bedstemor
+    audio: {fileID: 8300000, guid: cb63ba68b9d53574c83d15568706cffe, type: 3}
+  - word: bekymret
+    audio: {fileID: 8300000, guid: d74dbf8b0ae60b84ab39760cd9ec1ca2, type: 3}
+  - word: benzin
+    audio: {fileID: 8300000, guid: 6f320653d5b3d284abfd8f3864678c8a, type: 3}
+  - word: beskriver
+    audio: {fileID: 8300000, guid: fa3c6b32aea2d5d4b82dace253fd02d8, type: 3}
+  - word: bibliotek
+    audio: {fileID: 8300000, guid: 857912f3d7c0587418a21081f021e3d3, type: 3}
+  - word: billede
+    audio: {fileID: 8300000, guid: 012e826a27daea847a00e02d57cc37c5, type: 3}
+  - word: biologi
+    audio: {fileID: 8300000, guid: a2b9bece0b0651f4ea0aec3600943e1c, type: 3}
+  - word: "birketr\xE6"
+    audio: {fileID: 8300000, guid: 75e29688775120941966c801e812ad76, type: 3}
+  - word: blive
+    audio: {fileID: 8300000, guid: 91609a4364566ef45b9929d00358e3a8, type: 3}
+  - word: blomst
+    audio: {fileID: 8300000, guid: 4e25989704dad554da4c8ba8df52bffc, type: 3}
+  - word: blomster
+    audio: {fileID: 8300000, guid: 843e679382eeca34597cee668db43b26, type: 3}
+  - word: blyant
+    audio: {fileID: 8300000, guid: 9a2dcc76a2dec6640920972586c93974, type: 3}
+  - word: "bl\xE5hval"
+    audio: {fileID: 8300000, guid: 4d0f4ff1c1dc18346a30543c4cb84041, type: 3}
+  - word: bogreol
+    audio: {fileID: 8300000, guid: 9cfe4032a4b84754abfe7df0b03441ce, type: 3}
+  - word: bogstav
+    audio: {fileID: 8300000, guid: 1fd66121e3526124d9b6feebc391c2a3, type: 3}
+  - word: bord
+    audio: {fileID: 8300000, guid: 29972d914f53b8f42a120b5d033fed64, type: 3}
+  - word: brandbil
+    audio: {fileID: 8300000, guid: d5836e5b0bf29674f961583a8000c537, type: 3}
+  - word: brandmand
+    audio: {fileID: 8300000, guid: edeb8ee0093718b4892dc14c42bbb1f8, type: 3}
+  - word: briller
+    audio: {fileID: 8300000, guid: a026425f2f590a64dbebec9682822586, type: 3}
+  - word: bruge
+    audio: {fileID: 8300000, guid: a577f5607fa6d804a83687f55d9628dc, type: 3}
+  - word: brusebad
+    audio: {fileID: 8300000, guid: 9497cca41a90dc340954f76abc1a6486, type: 3}
+  - word: "br\xE6tspil"
+    audio: {fileID: 8300000, guid: 5e1bc11431fcdfe428817d281ec40a55, type: 3}
+  - word: busk
+    audio: {fileID: 8300000, guid: 78fc66132b9dae34cb52c5a40c5febc2, type: 3}
+  - word: butik
+    audio: {fileID: 8300000, guid: a2d53a1afc427d84abb6e6a197d1430c, type: 3}
+  - word: "b\xE6ver"
+    audio: {fileID: 8300000, guid: 9951d2991d5bd46449a501d9ac615dd2, type: 3}
+  - word: "b\xF8rn"
+    audio: {fileID: 8300000, guid: 067d3109bc4746e44a4a5eba47cbdc32, type: 3}
+  - word: computer
+    audio: {fileID: 8300000, guid: 2030e53665764f64bb5e2e4931099d8a, type: 3}
+  - word: cykel
+    audio: {fileID: 8300000, guid: b528e7ef6184a5640ba7700ecc656b12, type: 3}
+  - word: cykeltur
+    audio: {fileID: 8300000, guid: 798f1f5c3abecf44b8e4dcbbc6b1d10e, type: 3}
+  - word: danmark
+    audio: {fileID: 8300000, guid: 845e4be8bc6a6f149b5c27dc18bc4960, type: 3}
+  - word: danse
+    audio: {fileID: 8300000, guid: 6c5158eeeb55dd0428b57e3cc1c34d30, type: 3}
+  - word: dansk
+    audio: {fileID: 8300000, guid: 98cab11e6759792499e78325a9818535, type: 3}
+  - word: dreng
+    audio: {fileID: 8300000, guid: fdf25b3be47315643bd9d98007768b85, type: 3}
+  - word: drikkedunk
+    audio: {fileID: 8300000, guid: 062bbcfa8dee4594098e8683e9c2f557, type: 3}
+  - word: "dr\xF8mme"
+    audio: {fileID: 8300000, guid: 23c774a50b8031b48bc163505e330aa9, type: 3}
+  - word: efter
+    audio: {fileID: 8300000, guid: 0ae4cf7067974054eadbf256a0625190, type: 3}
+  - word: eftermiddag
+    audio: {fileID: 8300000, guid: 18e93c26eeb6c6843bf957a2afea1823, type: 3}
+  - word: "efter\xE5r"
+    audio: {fileID: 8300000, guid: db6e545bfe96a924c9d5269559141d19, type: 3}
+  - word: eksempel
+    audio: {fileID: 8300000, guid: 90cf35f67bb7c954aba1a5fec694a64b, type: 3}
+  - word: elefant
+    audio: {fileID: 8300000, guid: adffdb404269e0440ae58b8cce5aa8ee, type: 3}
+  - word: elev
+    audio: {fileID: 8300000, guid: 72a5be05deb7a8f4bb3dada5591a0e88, type: 3}
+  - word: engelsk
+    audio: {fileID: 8300000, guid: 9f7f6f71a10d2ea47b8c02bb6fad2303, type: 3}
+  - word: eventyr
+    audio: {fileID: 8300000, guid: afa571bdf3af0b64c86b1ae990b81047, type: 3}
+  - word: familie
+    audio: {fileID: 8300000, guid: 885e0b84cef18534c8297b37f1b58e82, type: 3}
+  - word: farve
+    audio: {fileID: 8300000, guid: 70901bc730ad89e4abcce27a97fd56e5, type: 3}
+  - word: farvel
+    audio: {fileID: 8300000, guid: aa958410e0124aa438807fa876e873df, type: 3}
+  - word: fastelavn
+    audio: {fileID: 8300000, guid: e566e9dbd797fe94aa56968504deed1e, type: 3}
+  - word: "figenp\xE5l\xE6g"
+    audio: {fileID: 8300000, guid: 0f3dc8e5ae121a64780f8d4470b96880, type: 3}
+  - word: film
+    audio: {fileID: 8300000, guid: 2c98907e03fc5e24dab40f0bfb9e0b97, type: 3}
+  - word: finde
+    audio: {fileID: 8300000, guid: 7bdad68a2faea7a4c8cc813910482a56, type: 3}
+  - word: findes
+    audio: {fileID: 8300000, guid: 77d24f7d52ff65f42bf5b5311cf0edab, type: 3}
+  - word: fisk
+    audio: {fileID: 8300000, guid: a4ec2d8b8d0b715498f580dc87810fc8, type: 3}
+  - word: fisker
+    audio: {fileID: 8300000, guid: b987e3191a9f39b488aa14dfc6c9d0b8, type: 3}
+  - word: fjernsyn
+    audio: {fileID: 8300000, guid: 9f5f33d54b2386d43aa3036de27cd6f9, type: 3}
+  - word: flagermus
+    audio: {fileID: 8300000, guid: 46dabec520deac140b258cfe0266d9d1, type: 3}
+  - word: flamme
+    audio: {fileID: 8300000, guid: 779ded9ee0c51334ab60599d180dae72, type: 3}
+  - word: fletning
+    audio: {fileID: 8300000, guid: 2c55fb8e0254c0842aba388b835cba66, type: 3}
+  - word: flodhest
+    audio: {fileID: 8300000, guid: b81681e6d5a979e4da2e84009e7ab35f, type: 3}
+  - word: flot
+    audio: {fileID: 8300000, guid: 8d45a3b110d0811439c2c4864f87e7aa, type: 3}
+  - word: flyverdragt
+    audio: {fileID: 8300000, guid: 02ad272a8d677ef4199b77ba51355867, type: 3}
+  - word: fodbold
+    audio: {fileID: 8300000, guid: 6f43be839200f33428be5fa088b661ad, type: 3}
+  - word: fordel
+    audio: {fileID: 8300000, guid: bc06640641d4b1443bed585dc0c246d9, type: 3}
+  - word: forfatter
+    audio: {fileID: 8300000, guid: 30159986c7e23db4ebe51fef52f524de, type: 3}
+  - word: formiddag
+    audio: {fileID: 8300000, guid: 410367721f87c42449df7d51c230c9c8, type: 3}
+  - word: forsigtig
+    audio: {fileID: 8300000, guid: 12c555a5472b37741b4f93f375cde980, type: 3}
+  - word: "forst\xE5"
+    audio: {fileID: 8300000, guid: ab74de69bbe5db2409e80582505bfb11, type: 3}
+  - word: "fort\xE6lle"
+    audio: {fileID: 8300000, guid: 0ba1722252a22af4483eca643e2ad0ce, type: 3}
+  - word: "for\xE5r"
+    audio: {fileID: 8300000, guid: 4c697a734d307784db43ca4be4a81d4b, type: 3}
+  - word: fredag
+    audio: {fileID: 8300000, guid: 7820fbfd29e9bc9439e89e38835213eb, type: 3}
+  - word: frikvarter
+    audio: {fileID: 8300000, guid: 2cdedefed083aa042b447ffe63b2eae4, type: 3}
+  - word: fritiden
+    audio: {fileID: 8300000, guid: 0b883cd60cbc9734baa98985674f1d11, type: 3}
+  - word: frokost
+    audio: {fileID: 8300000, guid: c0e52ce7ee15c2044953bdb12e266d8c, type: 3}
+  - word: frugt
+    audio: {fileID: 8300000, guid: ef3a98b3e036c894daeb0cefd6b6dbf8, type: 3}
+  - word: fugl
+    audio: {fileID: 8300000, guid: cdca76c28e6ba0441b370b6dd6892afb, type: 3}
+  - word: "f\xF8dselsdag"
+    audio: {fileID: 8300000, guid: bdd781ce11035714dbf3f1f93784e002, type: 3}
+  - word: "f\xF8rst"
+    audio: {fileID: 8300000, guid: 40886082939d4da46bc11e504453e08a, type: 3}
+  - word: gammel
+    audio: {fileID: 8300000, guid: 98718ea95efdb5a429b1808c0d1e79b3, type: 3}
+  - word: gave
+    audio: {fileID: 8300000, guid: 1761bb676b6fc4047a8b3edffb84c88a, type: 3}
+  - word: gavekort
+    audio: {fileID: 8300000, guid: 321a8f8ff890d2c4cb49dcb830c50b5e, type: 3}
+  - word: gemme
+    audio: {fileID: 8300000, guid: 875fb3f5887dd06409440ba95a427485, type: 3}
+  - word: geografi
+    audio: {fileID: 8300000, guid: 3dba2eb711042834e9396fce9ade01ea, type: 3}
+  - word: glad
+    audio: {fileID: 8300000, guid: 6cab99d770b3a59448de6a55dafe2ca7, type: 3}
+  - word: glas
+    audio: {fileID: 8300000, guid: 13c393b2b0081344894b8d1afa2329a1, type: 3}
+  - word: grammatik
+    audio: {fileID: 8300000, guid: c202ab120c6f5bb478f539d7a7c6ae37, type: 3}
+  - word: gryde
+    audio: {fileID: 8300000, guid: f09a7e9eb8867af47948775e5684c7a9, type: 3}
+  - word: "gr\xE6s"
+    audio: {fileID: 8300000, guid: a77086828754db44892a96c49b591d75, type: 3}
+  - word: "gr\xF8ntsag"
+    audio: {fileID: 8300000, guid: 9dbbf95cc19dee04fb6a92b2ef2d6c48, type: 3}
+  - word: gulerod
+    audio: {fileID: 8300000, guid: 86fef8fe0a62e444ba7f2d3eb5a833a0, type: 3}
+  - word: gymnastik
+    audio: {fileID: 8300000, guid: 3ff1ebf24fb605d46a3e5d32fc52f68f, type: 3}
+  - word: halloween
+    audio: {fileID: 8300000, guid: 35bcba0a3d2c2864782c6a33411858fe, type: 3}
+  - word: hals
+    audio: {fileID: 8300000, guid: 7b9995400af4c014e94141f58816020b, type: 3}
+  - word: hamster
+    audio: {fileID: 8300000, guid: a0544e89b8c98c04db6756fbbc2945b0, type: 3}
+  - word: have
+    audio: {fileID: 8300000, guid: 751f0e7d839dfbf45a7e89835cf91b0f, type: 3}
+  - word: heks
+    audio: {fileID: 8300000, guid: 1e68dd3edff76ad4fbf3048f20db042f, type: 3}
+  - word: hemmelighed
+    audio: {fileID: 8300000, guid: f09a63c5a9bcfcd41a1a5cee2cf8f699, type: 3}
+  - word: hest
+    audio: {fileID: 8300000, guid: 3217f11cf283c384aafc5530a42b5ee5, type: 3}
+  - word: hilsen
+    audio: {fileID: 8300000, guid: 31d87e3ed476daa448608996d8035190, type: 3}
+  - word: himmel
+    audio: {fileID: 8300000, guid: b57137af7e4278441843bf4f8bfea9d6, type: 3}
+  - word: historie
+    audio: {fileID: 8300000, guid: 801604ce0b93b354a91814a61151ea3f, type: 3}
+  - word: hjelm
+    audio: {fileID: 8300000, guid: 9022a9fec16a88244975f807fe9a8ba7, type: 3}
+  - word: hjem
+    audio: {fileID: 8300000, guid: 1d84054c3f918ba438da67817dfad8db, type: 3}
+  - word: hoppe
+    audio: {fileID: 8300000, guid: 8f8e2946426f8024fa3203f29d9b2c64, type: 3}
+  - word: hospital
+    audio: {fileID: 8300000, guid: 331c9711324ab4047b3c2d74dc2a5136, type: 3}
+  - word: hund
+    audio: {fileID: 8300000, guid: 9b01600da541ce84eb664160bff0f09f, type: 3}
+  - word: hundehvalp
+    audio: {fileID: 8300000, guid: 6eca3c339e82d6f43af27f98fd4bfa1e, type: 3}
+  - word: hurtig
+    audio: {fileID: 8300000, guid: c9982e9d4d7beae499f7156b7b080011, type: 3}
+  - word: hvad
+    audio: {fileID: 8300000, guid: 71ac2aad13e20f94cbaab28deca87ef1, type: 3}
+  - word: hvilket
+    audio: {fileID: 8300000, guid: 6d90eb3132a9419469bc4e8dcbe189f9, type: 3}
+  - word: hvorfor
+    audio: {fileID: 8300000, guid: 8a8919e14d9590a4cadc9488ca794e11, type: 3}
+  - word: "hvorn\xE5r"
+    audio: {fileID: 8300000, guid: 6a9cebf6778cd774db8a49db9f31fae5, type: 3}
+  - word: hytte
+    audio: {fileID: 8300000, guid: aa60ab241171d0342a03f16413f95563, type: 3}
+  - word: "h\xE5ber"
+    audio: {fileID: 8300000, guid: 0db94933b8ee3f649964fbce099c440e, type: 3}
+  - word: "h\xE5ndbold"
+    audio: {fileID: 8300000, guid: 0814f29881489a24d90ab4be2c37e6ee, type: 3}
+  - word: "h\xE5ndkl\xE6de"
+    audio: {fileID: 8300000, guid: 070e6b05be5c67448bbb308384bbce9a, type: 3}
+  - word: "h\xE5ndvask"
+    audio: {fileID: 8300000, guid: 4b0b7eb5d4bc30246ada06005fe75599, type: 3}
+  - word: "h\xF8ne"
+    audio: {fileID: 8300000, guid: b40add1dfff81814998b37d2fb65a2de, type: 3}
+  - word: "h\xF8retelefoner"
+    audio: {fileID: 8300000, guid: 8663efe95690a774dbae91f23c3791f5, type: 3}
+  - word: igen
+    audio: {fileID: 8300000, guid: 6c3b24e1be0c4d34089b46b0bc810f82, type: 3}
+  - word: internet
+    audio: {fileID: 8300000, guid: a8c12941b1e83f04a8499bf7eee805aa, type: 3}
+  - word: invitation
+    audio: {fileID: 8300000, guid: c15209f53a311f24faa8c46c8c34627c, type: 3}
+  - word: "isbj\xF8rn"
+    audio: {fileID: 8300000, guid: 83a7a1075d468db40a464c398fabdd70, type: 3}
+  - word: jakke
+    audio: {fileID: 8300000, guid: 8ee4ac3867d2b8a4fb5734bcc85e7a58, type: 3}
+  - word: jern
+    audio: {fileID: 8300000, guid: a9be845457ed6b84bbdc8b40aec078e5, type: 3}
+  - word: juice
+    audio: {fileID: 8300000, guid: 54e7245d107acd541a9d42c54d78ea42, type: 3}
+  - word: julehjerte
+    audio: {fileID: 8300000, guid: e759a49e4f025a14ab029760e18366bd, type: 3}
+  - word: julemand
+    audio: {fileID: 8300000, guid: 0b12fc243d0cd984fa233e187d984461, type: 3}
+  - word: julestjerne
+    audio: {fileID: 8300000, guid: 0c8920c70cba21149ac6f3d7c31198a7, type: 3}
+  - word: "j\xE6ger"
+    audio: {fileID: 8300000, guid: abb917ea5a95ef943b57f0deddc5c0ad, type: 3}
+  - word: kaffe
+    audio: {fileID: 8300000, guid: b8265b0526c842e4c9d20c3e02a468c9, type: 3}
+  - word: kaffekop
+    audio: {fileID: 8300000, guid: 73e1af707109b0a49b448319614d8403, type: 3}
+  - word: kakao
+    audio: {fileID: 8300000, guid: 2d8db6fca8a07244a975dcc07c47da41, type: 3}
+  - word: kalender
+    audio: {fileID: 8300000, guid: b568a2c112f0cfb4f98e6c0af4714977, type: 3}
+  - word: kamel
+    audio: {fileID: 8300000, guid: 593f1f1c0bf794044b0392ae2040845e, type: 3}
+  - word: kamp
+    audio: {fileID: 8300000, guid: f76a84e2da9ab124aa506793930d5663, type: 3}
+  - word: kanin
+    audio: {fileID: 8300000, guid: 8343c2c6887cf814abefc51779e4f720, type: 3}
+  - word: kappe
+    audio: {fileID: 8300000, guid: b1f6d0ce7530eed45824536202189381, type: 3}
+  - word: kartoffel
+    audio: {fileID: 8300000, guid: cd40bd0f131c64f42bd40b002bea2e2b, type: 3}
+  - word: kasse
+    audio: {fileID: 8300000, guid: 4dc2c0d4f0752da499e39c7033045c4b, type: 3}
+  - word: kedelig
+    audio: {fileID: 8300000, guid: 0739ea93f386a8b4eab80e99591f3edc, type: 3}
+  - word: kigger
+    audio: {fileID: 8300000, guid: caec319cefa73ff4bb9a9cf4e3f85143, type: 3}
+  - word: killing
+    audio: {fileID: 8300000, guid: 76b8b3f7c17f4ff4e9a953516918bcb5, type: 3}
+  - word: kirke
+    audio: {fileID: 8300000, guid: 28690a859b057584fa8aebdcaa6c0276, type: 3}
+  - word: kjole
+    audio: {fileID: 8300000, guid: 0cbfbd0d3ac768641ab902b476f68f6c, type: 3}
+  - word: "kladdeh\xE6fte"
+    audio: {fileID: 8300000, guid: 54314085c56593b43a0ee96fbb4551e5, type: 3}
+  - word: klasse
+    audio: {fileID: 8300000, guid: cc91373145c4d0948be029edf3d8268b, type: 3}
+  - word: klassefest
+    audio: {fileID: 8300000, guid: 57cbb8884363dc04991e007b993bdf2a, type: 3}
+  - word: klassetrin
+    audio: {fileID: 8300000, guid: ed1b77208c04286428eaaa2214da415a, type: 3}
+  - word: klog
+    audio: {fileID: 8300000, guid: 648de59bf5666d94cb6b010f20fa8c1f, type: 3}
+  - word: klokke
+    audio: {fileID: 8300000, guid: 41f177fb9d34a1d4180525d3fb212313, type: 3}
+  - word: klovn
+    audio: {fileID: 8300000, guid: 899ad63ed8066714cb74dbc32fe13556, type: 3}
+  - word: komme
+    audio: {fileID: 8300000, guid: 1757ea037c5e07645acb0028ff63c213, type: 3}
+  - word: kontor
+    audio: {fileID: 8300000, guid: f4adc68349dcf0a49acc3c76bd740716, type: 3}
+  - word: kost
+    audio: {fileID: 8300000, guid: 1475170147e45d84394e70048b2b06da, type: 3}
+  - word: kostume
+    audio: {fileID: 8300000, guid: a987ce3d4359651498b7b3e9359400aa, type: 3}
+  - word: kram
+    audio: {fileID: 8300000, guid: c1abaad0e13a26a419e4f785ab44df2c, type: 3}
+  - word: kuglepen
+    audio: {fileID: 8300000, guid: 19c9d54ca79769d4eaccfacb4df465d5, type: 3}
+  - word: kylling
+    audio: {fileID: 8300000, guid: 50293c0e965f4584abbaa315acd23a67, type: 3}
+  - word: "k\xE6de"
+    audio: {fileID: 8300000, guid: 38c252606d05b4e4cb8bf9efc2a53193, type: 3}
+  - word: "k\xF8dsovs"
+    audio: {fileID: 8300000, guid: 8b983fa13ab29b44a82c011857d455ea, type: 3}
+  - word: "k\xF8kken"
+    audio: {fileID: 8300000, guid: e687717d6f824a741bb0aad0ba6e4de4, type: 3}
+  - word: "k\xF8leskab"
+    audio: {fileID: 8300000, guid: 154253e5c381d414f893998c7ae919e1, type: 3}
+  - word: lampe
+    audio: {fileID: 8300000, guid: aec47a634bb945341871db0624f5b591, type: 3}
+  - word: langsom
+    audio: {fileID: 8300000, guid: 079ee4bd81dface4e8f3f4a9fe07a029, type: 3}
+  - word: ledning
+    audio: {fileID: 8300000, guid: 3e99703de45ded642aceb545e4c9a976, type: 3}
+  - word: lege
+    audio: {fileID: 8300000, guid: 6a2804e7349536b4ab2583c43a3abe66, type: 3}
+  - word: legeplads
+    audio: {fileID: 8300000, guid: 3aa539e0b15245e409c912e0454bec7a, type: 3}
+  - word: lektier
+    audio: {fileID: 8300000, guid: 5a79819b3848e834681dd7b3d10af901, type: 3}
+  - word: leverpostej
+    audio: {fileID: 8300000, guid: a04363149b60eca4380d5121d1c1cf8d, type: 3}
+  - word: lille
+    audio: {fileID: 8300000, guid: 8372c4cf612a5c4479c4f7abf69d766a, type: 3}
+  - word: lineal
+    audio: {fileID: 8300000, guid: a8d5e1e6467052b4fbeb6483ea910506, type: 3}
+  - word: lomme
+    audio: {fileID: 8300000, guid: bb6b755c2efeed546bfde4c4e31c53de, type: 3}
+  - word: lommelygte
+    audio: {fileID: 8300000, guid: 119b35ee091f0f940b7bd1a6ca16cde5, type: 3}
+  - word: lukke
+    audio: {fileID: 8300000, guid: e1751b2395328324289a8a5e4052c1ff, type: 3}
+  - word: lykkelig
+    audio: {fileID: 8300000, guid: 17a2b05da01604e4fb6377eb5a762fae, type: 3}
+  - word: lyser
+    audio: {fileID: 8300000, guid: 02bb8b691b314124ab3155e0b09c83bd, type: 3}
+  - word: "lysk\xE6de"
+    audio: {fileID: 8300000, guid: b496d48ea45e3ca489955c1f214bc849, type: 3}
+  - word: "l\xE6se"
+    audio: {fileID: 8300000, guid: e1d137b8ceb8e224895b3f68c61c79d2, type: 3}
+  - word: "l\xF8be"
+    audio: {fileID: 8300000, guid: 2034641413bf9604ea6186d27ca42593, type: 3}
+  - word: "l\xF8rdag"
+    audio: {fileID: 8300000, guid: 6bb774647fff2a848a820e771c5a147d, type: 3}
+  - word: madpakke
+    audio: {fileID: 8300000, guid: 64a0448444d24f9499b0a971e11ab854, type: 3}
+  - word: majs
+    audio: {fileID: 8300000, guid: 484a8011fb40b7449b8650b13307723a, type: 3}
+  - word: male
+    audio: {fileID: 8300000, guid: c08dad126d372b445a0e4759281b82ab, type: 3}
+  - word: maleri
+    audio: {fileID: 8300000, guid: 7e81892c60323fa49801022c7ae5807e, type: 3}
+  - word: mandag
+    audio: {fileID: 8300000, guid: f5d0bf6412b5f604e8e960f9f311772b, type: 3}
+  - word: mange
+    audio: {fileID: 8300000, guid: 765106e5c6496404db3d3bcd21cdb3c2, type: 3}
+  - word: matematik
+    audio: {fileID: 8300000, guid: 5875d38f3de97b540a1a15de0b17fad0, type: 3}
+  - word: medalje
+    audio: {fileID: 8300000, guid: c88bee049e18e2f42b260037f2cac172, type: 3}
+  - word: mellemrum
+    audio: {fileID: 8300000, guid: 346431dc1be39da47a3e065b9c57dd0e, type: 3}
+  - word: melodi
+    audio: {fileID: 8300000, guid: 1f2f082aec8b27b4e84ebb35c9227def, type: 3}
+  - word: mikroovn
+    audio: {fileID: 8300000, guid: 137d77595dac80b4bb4e3050389bba6a, type: 3}
+  - word: minecraft
+    audio: {fileID: 8300000, guid: 9b7e21089d95d9b47bc0c95c459e4d4c, type: 3}
+  - word: mobiltelefon
+    audio: {fileID: 8300000, guid: f868abf7511b2c94c82d2e6670e46983, type: 3}
+  - word: morgen
+    audio: {fileID: 8300000, guid: 37513c28efc348149b9fac5844e4baea, type: 3}
+  - word: morgenmad
+    audio: {fileID: 8300000, guid: e3f0ccf07e9a1e54cae35d4aacea919e, type: 3}
+  - word: motor
+    audio: {fileID: 8300000, guid: 06721bd22e1f4384e8dfa9aca6542ee0, type: 3}
+  - word: mulighed
+    audio: {fileID: 8300000, guid: 72d1779a1fda829448c3965b12f79c13, type: 3}
+  - word: murer
+    audio: {fileID: 8300000, guid: 8a85aa2e6cdeaa744a4e3d525806850b, type: 3}
+  - word: museum
+    audio: {fileID: 8300000, guid: a6167538ba43d194abe9597810845c97, type: 3}
+  - word: "m\xE5ge"
+    audio: {fileID: 8300000, guid: aea6a78fe1c5ddb4698bd3cc409ce00c, type: 3}
+  - word: "m\xE5ne"
+    audio: {fileID: 8300000, guid: 7d38c04ced4a8c748aec3f2bb33e7631, type: 3}
+  - word: "m\xE5ske"
+    audio: {fileID: 8300000, guid: d907941bfe24af64f9faf144a981283d, type: 3}
+  - word: "m\xE6lk"
+    audio: {fileID: 8300000, guid: 76de18ef1e05df644a19cbb49c91adeb, type: 3}
+  - word: "m\xF8rke"
+    audio: {fileID: 8300000, guid: 4159a57eb21d51c4091372d4091312df, type: 3}
+  - word: nabo
+    audio: {fileID: 8300000, guid: a4687342deacca6428d31f7df4e774ce, type: 3}
+  - word: natten
+    audio: {fileID: 8300000, guid: 10f1e347ce1406c4fad55dd76da355ab, type: 3}
+  - word: natur
+    audio: {fileID: 8300000, guid: 837ea210e8cfaca4f8405dce6a797b3d, type: 3}
+  - word: nintendo
+    audio: {fileID: 8300000, guid: 9440a3085ce271a40b9c827689f328db, type: 3}
+  - word: nisse
+    audio: {fileID: 8300000, guid: 033fb1b57c96979428c61dfe804a9f77, type: 3}
+  - word: "n\xE6sehorn"
+    audio: {fileID: 8300000, guid: dc88e17eeeccf22478373a264720a25d, type: 3}
+  - word: "n\xF8gle"
+    audio: {fileID: 8300000, guid: bc8536bf69c900d4b89ab81271c90753, type: 3}
+  - word: onsdag
+    audio: {fileID: 8300000, guid: 515b46c60a4bdc848bd6a8b4b56cafe4, type: 3}
+  - word: opgave
+    audio: {fileID: 8300000, guid: e24f10ed1d2411748b965680bb2fdeaa, type: 3}
+  - word: opleve
+    audio: {fileID: 8300000, guid: 1a1ec927ceea3c24dbb5640c544323d1, type: 3}
+  - word: ordbog
+    audio: {fileID: 8300000, guid: 7cd69a0b3ff92824980367fff934591a, type: 3}
+  - word: overrasket
+    audio: {fileID: 8300000, guid: e12e366dc201bb844b0861f668585e55, type: 3}
+  - word: "overt\xF8j"
+    audio: {fileID: 8300000, guid: e6c5060e9b540474db44fe50c004898b, type: 3}
+  - word: palme
+    audio: {fileID: 8300000, guid: 452869ad0e38e3d4788e85b9b56e2a09, type: 3}
+  - word: papir
+    audio: {fileID: 8300000, guid: 393ec29bc24acb34bb3faf67601be980, type: 3}
+  - word: penalhus
+    audio: {fileID: 8300000, guid: 6dae470ef3997ac4d978ef46ed63d71b, type: 3}
+  - word: piger
+    audio: {fileID: 8300000, guid: a9f064e3bde02fa4db0769765cf33bde, type: 3}
+  - word: pindsvin
+    audio: {fileID: 8300000, guid: bc69c7b1c0f0f7842bf8f73a1ae589e4, type: 3}
+  - word: pingvin
+    audio: {fileID: 8300000, guid: 1a44bebd1ec8cfc42aba0141e4bee335, type: 3}
+  - word: pirat
+    audio: {fileID: 8300000, guid: 1fa12f255af967348bf82170aafac44e, type: 3}
+  - word: plakat
+    audio: {fileID: 8300000, guid: 40535a388634bd34e9cdb41026dcd85f, type: 3}
+  - word: plante
+    audio: {fileID: 8300000, guid: 16f6f20a3895397449fa05cd66189e81, type: 3}
+  - word: politibil
+    audio: {fileID: 8300000, guid: 5d141fe8318836543b43760125018f5f, type: 3}
+  - word: politimand
+    audio: {fileID: 8300000, guid: 67f8141c04e86624daad194d3647d171, type: 3}
+  - word: prale
+    audio: {fileID: 8300000, guid: a51e451adcd67204787fa335b0740225, type: 3}
+  - word: prinsesse
+    audio: {fileID: 8300000, guid: 8d8fc8f0306ffc54ab229628a6112de5, type: 3}
+  - word: problemet
+    audio: {fileID: 8300000, guid: ef5b53a242234554aa9b5f26d3f8553c, type: 3}
+  - word: "pr\xF8ve"
+    audio: {fileID: 8300000, guid: 784bcb1781701f6489b3e8103b9d0ca0, type: 3}
+  - word: "p\xE5ske"
+    audio: {fileID: 8300000, guid: 8a9111e0909c8c140873f7013098c728, type: 3}
+  - word: "p\xE5skeferie"
+    audio: {fileID: 8300000, guid: 7b296dc13e402a44e8c763d2fa3f873a, type: 3}
+  - word: "p\xE5skehare"
+    audio: {fileID: 8300000, guid: 20443b7829a104242bc179e127a48d1d, type: 3}
+  - word: "p\xE5skeris"
+    audio: {fileID: 8300000, guid: c060f03f3c5a27f4bbdc4c4e85d50907, type: 3}
+  - word: "p\xE6re"
+    audio: {fileID: 8300000, guid: 7f1d7a48d461e7948b17185e1d3d6718, type: 3}
+  - word: regn
+    audio: {fileID: 8300000, guid: c3b94c46464eac24a80a162e395e0c5b, type: 3}
+  - word: regnbue
+    audio: {fileID: 8300000, guid: 8ae7bb2b71633cb4e82d21993a4667ac, type: 3}
+  - word: regnestykke
+    audio: {fileID: 8300000, guid: ae9492625bd806d49a97b018dced9d9a, type: 3}
+  - word: rejse
+    audio: {fileID: 8300000, guid: 4c17f593fddbdf046be092968ad294d3, type: 3}
+  - word: roblox
+    audio: {fileID: 8300000, guid: fc35cde624eaf0b4eaf1ee22ffa203dc, type: 3}
+  - word: "rugbr\xF8d"
+    audio: {fileID: 8300000, guid: d0bbd9db2266f8e4e9de329d7f4aefaa, type: 3}
+  - word: rummet
+    audio: {fileID: 8300000, guid: 95ef9e5911178a745b84fadaa952aa0e, type: 3}
+  - word: rumskib
+    audio: {fileID: 8300000, guid: 382d096645eb4c8449654baeeb14fd22, type: 3}
+  - word: rund
+    audio: {fileID: 8300000, guid: a6c60fda271a76847b3e62e47ea0925c, type: 3}
+  - word: ryste
+    audio: {fileID: 8300000, guid: 9eed2f7a447ad6c44aaef58f6ae9d23f, type: 3}
+  - word: "r\xE6kke"
+    audio: {fileID: 8300000, guid: 913573a5485817440a864ec714d0a50a, type: 3}
+  - word: saftevand
+    audio: {fileID: 8300000, guid: 7ff3a2e7ba8a35748a2dded906657679, type: 3}
+  - word: salt
+    audio: {fileID: 8300000, guid: c07d34f313d546a4790065f9999df152, type: 3}
+  - word: samarbejde
+    audio: {fileID: 8300000, guid: adb3de196c125b04894f01a91d1732a7, type: 3}
+  - word: sang
+    audio: {fileID: 8300000, guid: a2335a3660ca4fa40acfa40950855dac, type: 3}
+  - word: savner
+    audio: {fileID: 8300000, guid: d6851b5a3d65c9c4bafbcd5370afcbc6, type: 3}
+  - word: seneste
+    audio: {fileID: 8300000, guid: 80a8b00c93086154ba2e6b84c5e3bc21, type: 3}
+  - word: seng
+    audio: {fileID: 8300000, guid: ce0b88e73c40139489993057f17eb6ab, type: 3}
+  - word: serie
+    audio: {fileID: 8300000, guid: 278b3a596501c8f47943cda7d2bbeac1, type: 3}
+  - word: siden
+    audio: {fileID: 8300000, guid: 68d7bd6862a92374ca6c13d341f87fb3, type: 3}
+  - word: sirup
+    audio: {fileID: 8300000, guid: c1e183afc1de2724fbcaf677cb9271ae, type: 3}
+  - word: sjovt
+    audio: {fileID: 8300000, guid: 5ead6ef316d8bce41bf6b46fe002f7d7, type: 3}
+  - word: skab
+    audio: {fileID: 8300000, guid: b427c5cfd7e62b144b00589fac6da2f5, type: 3}
+  - word: skattejagt
+    audio: {fileID: 8300000, guid: 16f3a910b508c7741ab038af64fe3b58, type: 3}
+  - word: skattekiste
+    audio: {fileID: 8300000, guid: 06e9a4314092fe74fa89228486f60e60, type: 3}
+  - word: skiferie
+    audio: {fileID: 8300000, guid: 350f3a69a42e3734dab38effbc2b06d8, type: 3}
+  - word: skole
+    audio: {fileID: 8300000, guid: 807dcdc245f64c54b8838c07a65c97bf, type: 3}
+  - word: skolebus
+    audio: {fileID: 8300000, guid: b1425b4536a85a04fa9fc8a4e771f00a, type: 3}
+  - word: skolefest
+    audio: {fileID: 8300000, guid: 047d32a9935eea24eb10cd1da57fb962, type: 3}
+  - word: skoletaske
+    audio: {fileID: 8300000, guid: f14c53f7c32f73b43975dfbd1c6b8802, type: 3}
+  - word: skov
+    audio: {fileID: 8300000, guid: 2bfa283c6bd94e140b04e16e97feda46, type: 3}
+  - word: skraldespand
+    audio: {fileID: 8300000, guid: a2e909cc852827f488c2dbbc0a2e042b, type: 3}
+  - word: skrive
+    audio: {fileID: 8300000, guid: 4c844adfe4ee16f42b8c07b52b40fdd7, type: 3}
+  - word: "sk\xE5l"
+    audio: {fileID: 8300000, guid: 92d1aa5afb1866346a8d20109752a8cb, type: 3}
+  - word: slange
+    audio: {fileID: 8300000, guid: 5fb5d65074d36b247b8ed90c57e40f75, type: 3}
+  - word: slette
+    audio: {fileID: 8300000, guid: ed4ad2fc8527f674dae8bd57543c2d06, type: 3}
+  - word: slik
+    audio: {fileID: 8300000, guid: 7b4428910db5d9b42b3ba921f4dccc53, type: 3}
+  - word: snebold
+    audio: {fileID: 8300000, guid: fc2d5b9ccbfbba8449c4b8ec061c5083, type: 3}
+  - word: snegl
+    audio: {fileID: 8300000, guid: 74c8f332a7cab0f4d9c821cfbeaba856, type: 3}
+  - word: snemand
+    audio: {fileID: 8300000, guid: aac8d5b75bd0b4849aa8f29e87fda1f8, type: 3}
+  - word: sodavand
+    audio: {fileID: 8300000, guid: eb04f487f76228749aadd842db9d7eb5, type: 3}
+  - word: solskin
+    audio: {fileID: 8300000, guid: 0d96e57e5b90bab4ca5c29e2b58432a2, type: 3}
+  - word: sommer
+    audio: {fileID: 8300000, guid: afb2f5c4af92c5c4fad93b04034a4b4b, type: 3}
+  - word: sommerferie
+    audio: {fileID: 8300000, guid: dcf6e7a3906da5b4ea2d2608cac8de3f, type: 3}
+  - word: sommerhus
+    audio: {fileID: 8300000, guid: cdf8789b3803f43439fe899bfc651f13, type: 3}
+  - word: "spegep\xF8lse"
+    audio: {fileID: 8300000, guid: 9280d9397536d264cad962fd00f39c9a, type: 3}
+  - word: spille
+    audio: {fileID: 8300000, guid: 42f5f549fe040e54fa86249be4a8c1e9, type: 3}
+  - word: "sp\xE6ndende"
+    audio: {fileID: 8300000, guid: b7c6b79bc6803a54b94790cea5cdebc0, type: 3}
+  - word: "sp\xF8rgsm\xE5l"
+    audio: {fileID: 8300000, guid: 818f15f30eead3c448a78b6746e2e4d8, type: 3}
+  - word: sted
+    audio: {fileID: 8300000, guid: 7f51e66187fd94942aec7f0b118f00c1, type: 3}
+  - word: stjerne
+    audio: {fileID: 8300000, guid: 4009fa056ccdd58449c67db6f6c9e9e2, type: 3}
+  - word: stoppe
+    audio: {fileID: 8300000, guid: 089114df2ee3cb84d8adcddbb541a5aa, type: 3}
+  - word: stor
+    audio: {fileID: 8300000, guid: 8e7a60d2313b9314e8965c57d5b42570, type: 3}
+  - word: strand
+    audio: {fileID: 8300000, guid: 679b60af337850043a61956a9f4dc9c3, type: 3}
+  - word: stue
+    audio: {fileID: 8300000, guid: 53ecf9de6410b1944ba1b761ba17c2e4, type: 3}
+  - word: "st\xF8vler"
+    audio: {fileID: 8300000, guid: 602513da93a469c4eb7a51023563ab37, type: 3}
+  - word: sulten
+    audio: {fileID: 8300000, guid: e448896d8009c424f92d929fb8de3f86, type: 3}
+  - word: "sv\xE6rt"
+    audio: {fileID: 8300000, guid: 8f76c4f1c82c0574fbc914a33f107769, type: 3}
+  - word: "sv\xF8mme"
+    audio: {fileID: 8300000, guid: 8a5d5287ee0d7e840b902818ac69b7c0, type: 3}
+  - word: "sv\xF8mmehal"
+    audio: {fileID: 8300000, guid: 67e617feecf99ae4ca190d51adc57b34, type: 3}
+  - word: "s\xE5dan"
+    audio: {fileID: 8300000, guid: 81f18789432b6c446a7e9e2ba0b1fc1d, type: 3}
+  - word: "s\xE6lge"
+    audio: {fileID: 8300000, guid: 429fd4f1b8ec0f54e89cb0bf4059f289, type: 3}
+  - word: "s\xE6tning"
+    audio: {fileID: 8300000, guid: 9c05198d7f1634846b6bd71c23067292, type: 3}
+  - word: "s\xF8l\xF8ve"
+    audio: {fileID: 8300000, guid: df726a8401da88e4a9ba2e3297acb838, type: 3}
+  - word: "s\xF8ndag"
+    audio: {fileID: 8300000, guid: a75e855d8173a9e4ca198f69d6a7d9b0, type: 3}
+  - word: "s\xF8r\xF8ver"
+    audio: {fileID: 8300000, guid: 94f0ae3767d970848a5fe700e78a1a8e, type: 3}
+  - word: "s\xF8skende"
+    audio: {fileID: 8300000, guid: d254026d07f619d48844e8075e50aaf1, type: 3}
+  - word: tallerken
+    audio: {fileID: 8300000, guid: 61dd7a11180569b40855995a5e635162, type: 3}
+  - word: "tandb\xF8rste"
+    audio: {fileID: 8300000, guid: d9bc6720f66c8ed42b441f0af35254c4, type: 3}
+  - word: tandpasta
+    audio: {fileID: 8300000, guid: cecdbefffac74814aa45ef51abf35de0, type: 3}
+  - word: taske
+    audio: {fileID: 8300000, guid: 799b3738f8d56614eb20ffd82d6826ef, type: 3}
+  - word: tastatur
+    audio: {fileID: 8300000, guid: 93387ea141d594b4d8d058e02fe6b3f2, type: 3}
+  - word: tavle
+    audio: {fileID: 8300000, guid: 1e303c6385e4042419ca5bf1b147abb6, type: 3}
+  - word: tegneserie
+    audio: {fileID: 8300000, guid: 4eaec4fea8fee02409180ad470e91842, type: 3}
+  - word: tegning
+    audio: {fileID: 8300000, guid: 32eee38265f746e4085dda446fd542d3, type: 3}
+  - word: tiger
+    audio: {fileID: 8300000, guid: 6f2771022b8549246ba6fdacb3156398, type: 3}
+  - word: ting
+    audio: {fileID: 8300000, guid: d39b25b0b1dc7d6438ac2dbb9033b99b, type: 3}
+  - word: tirsdag
+    audio: {fileID: 8300000, guid: 758a9f186e6715745b8674619aad942c, type: 3}
+  - word: toilet
+    audio: {fileID: 8300000, guid: 2a2a981018ef39a4a806f554396a9ec2, type: 3}
+  - word: torsdag
+    audio: {fileID: 8300000, guid: e3aaa7e0ab177a848b5fb60118b7664a, type: 3}
+  - word: troldmand
+    audio: {fileID: 8300000, guid: 31278620c443bb34bbeef0bb006778d6, type: 3}
+  - word: "tr\xE6ning"
+    audio: {fileID: 8300000, guid: 632430f631ce65347b37c0078377a10c, type: 3}
+  - word: "t\xF8mmer"
+    audio: {fileID: 8300000, guid: 30cd7cac056da3b4ca1db2006f3e23d9, type: 3}
+  - word: "t\xF8nde"
+    audio: {fileID: 8300000, guid: d77da82e1127f4947b28c4ad1d95ea34, type: 3}
+  - word: "t\xF8rstig"
+    audio: {fileID: 8300000, guid: fd71b0218cc065643ad223ad7cb96bca, type: 3}
+  - word: udvikling
+    audio: {fileID: 8300000, guid: efa7eed58cb694041a285fc365e5bde4, type: 3}
+  - word: undervisning
+    audio: {fileID: 8300000, guid: 55a8e6911bc2bf9479a2c8648268f0eb, type: 3}
+  - word: undskyld
+    audio: {fileID: 8300000, guid: ff4da09b2a8ada04ca28c1539e7fc9de, type: 3}
+  - word: vand
+    audio: {fileID: 8300000, guid: 8f188da56c83c8544adc71bb9eebd683, type: 3}
+  - word: vandkande
+    audio: {fileID: 8300000, guid: d2b4f34fa1f867c4e8a9087fb3b30476, type: 3}
+  - word: veninde
+    audio: {fileID: 8300000, guid: a6673ddbb767b56439d476097ee7cc80, type: 3}
+  - word: venlig
+    audio: {fileID: 8300000, guid: 3847782744a54ea4cab5d7dc714abdcc, type: 3}
+  - word: verden
+    audio: {fileID: 8300000, guid: c97e5437ed796ef44876f3bd2c907049, type: 3}
+  - word: vind
+    audio: {fileID: 8300000, guid: 8ed3e0631148d7b47b3e23d633094c41, type: 3}
+  - word: vinter
+    audio: {fileID: 8300000, guid: a5ec4f01d75006c4e9014dbf2d6a06b1, type: 3}
+  - word: vinterferie
+    audio: {fileID: 8300000, guid: cc203790df2bd804db3e139e74a3ed5f, type: 3}
+  - word: "v\xE6kkeur"
+    audio: {fileID: 8300000, guid: a06694e24b8557b48a35d3f1b54e0cc6, type: 3}
+  - word: "v\xE6relse"
+    audio: {fileID: 8300000, guid: 4c51aedf53d3f8e45a00e0b45eebf8a1, type: 3}
+  - word: zebra
+    audio: {fileID: 8300000, guid: a636f035b09b323418c111067ef7dff5, type: 3}
+  - word: "\xE6ble"
+    audio: {fileID: 8300000, guid: 771c68e03a1783e4897184a6209b81b6, type: 3}
+  - word: "\xE5bne"
+    audio: {fileID: 8300000, guid: 871100b820b4bb844a5ef0878447ba7a, type: 3}
+--- !u!82 &218896603278536633 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2258623238229469858, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+  m_PrefabInstance: {fileID: 218896603278536627}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &218896603278536635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+  m_PrefabInstance: {fileID: 218896603278536627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218896603278536628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e03a63fc684ab4ebb2a48207c943a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::G1ManagerScript
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 218896603278536627}
   - {fileID: 2051588106}
+  - {fileID: 456832618}

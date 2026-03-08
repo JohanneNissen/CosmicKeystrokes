@@ -4,16 +4,18 @@ using UnityEngine;
 public class G1DistanceCounter : MonoBehaviour
 {
     public TMP_Text text;          
-    public float countSpeed = 1.1f;   
+    public float countSpeed = 1.1f;
+    public bool gameRunning = true;
 
-
-    private float currentValue = 0f;
+    public float currentValue = 0f;
 
     void Update()
     {
-        currentValue += countSpeed * Time.deltaTime;
-        text.text = Mathf.FloorToInt(currentValue).ToString();
-        
+        if (gameRunning == true)
+        {
+            currentValue += countSpeed * Time.deltaTime;
+            text.text = Mathf.FloorToInt(currentValue).ToString();
+        }
     }
 
 
