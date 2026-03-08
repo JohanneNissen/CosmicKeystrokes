@@ -1,8 +1,7 @@
- using UnityEngine;
+using UnityEngine;
 
-public class ScrollUV : MonoBehaviour
+public class BGScroll : MonoBehaviour
 {
-
     public float parralax = 2f;
  
     void Update()
@@ -12,7 +11,7 @@ public class ScrollUV : MonoBehaviour
         Material mat = mr.material;
         Vector2 offset = mat.mainTextureOffset;
 
-        offset.y = transform.position.z / transform.localScale.z / parralax;
+        offset.y = offset.y + .001f *parralax;
         mat.mainTextureOffset = offset;
 
 
