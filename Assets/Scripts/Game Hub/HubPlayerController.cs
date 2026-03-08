@@ -10,7 +10,9 @@ public class HubPlayerController : MonoBehaviour
 
     [Header("Movement")]
     [SerializeField] private ParticleSystem clickEffect;
+    [SerializeField] private ParticleSystem flameEffect;
     [SerializeField] private LayerMask clickableLayers;
+    private ParticleSystem.MainModule flameMain;
 
     private NavMeshAgent agent;
     private Animator animator;
@@ -20,6 +22,10 @@ public class HubPlayerController : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        if (flameEffect != null)
+            flameMain = flameEffect.main;
+
     }
 
     private void OnEnable()
@@ -41,6 +47,7 @@ public class HubPlayerController : MonoBehaviour
     private void Update()
     {
         FaceTarget();
+        CheckIfReachedDestination();
     }
 
     private void OnClickMove(InputAction.CallbackContext context)
@@ -56,6 +63,12 @@ public class HubPlayerController : MonoBehaviour
             {
                 Instantiate(clickEffect, hit.point + Vector3.up * 0.1f, clickEffect.transform.rotation);
             }
+
+            if (flameEffect != null)
+            {
+                flameMain.startLifetime = 1.3f;
+                flameEffect.Play();
+            }
         }
     }
 
@@ -67,6 +80,20 @@ public class HubPlayerController : MonoBehaviour
         {
             Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * lookRotationSpeed);
+        }
+    }
+
+    private void CheckIfReachedDestination()
+    {
+        if (!agent.pathPending &&
+            agent.remainingDistance <= agent.stoppingDistance &&
+            (!agent.hasPath || agent.velocity.sqrMagnitude == 0f))
+        {
+            if (flameEffect != null)
+            {
+                flameMain.startLifetime = 0f;
+                flameEffect.Stop();
+            }
         }
     }
 }
