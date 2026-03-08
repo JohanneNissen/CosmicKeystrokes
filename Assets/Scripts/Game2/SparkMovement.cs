@@ -26,10 +26,9 @@ public class SparkMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             DetermineDestination();
-            Debug.Log("is moving: " + isMoving);
         }
 
         if (isMoving == true)
@@ -49,10 +48,19 @@ public class SparkMovement : MonoBehaviour
         if (index >= pathToDes.Count)
         {
             isMoving = false;
+            if (destination.GetComponent<WaypointManager>().number == 2 || destination.GetComponent<WaypointManager>().number == 7)
+            {
+                currentWP = destination.GetComponent<WaypointManager>().prevWP;
+                currentWPmanager = destination.GetComponent<WaypointManager>().prevWP.GetComponent<WaypointManager>();
+                current = destination.GetComponent<WaypointManager>().number;
+                index = 0;
+                spark.transform.position = currentWP.transform.position;
+                return;
+            }
             currentWP = destination;
+            index = 0;
             currentWPmanager = destination.GetComponent<WaypointManager>();
             current = destination.GetComponent<WaypointManager>().number;
-            Debug.Log(currentWP + " and " + currentWPmanager + " and " + isMoving);
             return;
         }
 
@@ -63,7 +71,6 @@ public class SparkMovement : MonoBehaviour
         {
             index++;
         }
-        Debug.Log("moving active: " + isMoving);
     }
     void DetermineDestination()
     {
