@@ -9,9 +9,18 @@ public class G1Timer : MonoBehaviour
 
     private float timeLeft;
 
+    public G1DistanceCounter distanceCounter;
+    public G1ManagerScript managerScript;
+
+    //Text boxes for game finish
+    public TMP_Text endScreen;
+    public TMP_Text backtext;
+
     void Start()
     {
         timeLeft = startTime;
+        endScreen.gameObject.SetActive(false);
+        backtext.gameObject.SetActive(false);
     }
 
     void Update()
@@ -30,8 +39,17 @@ public class G1Timer : MonoBehaviour
 
         if (timeLeft <= 0) 
         {
+            distanceCounter.gameRunning = false;
+            managerScript.gameRunning = false;
+            endScreen.gameObject.SetActive(true);
+            backtext.gameObject.SetActive(true);
+            endScreen.text = ("Tillykke, du har rejst: " + Mathf.FloorToInt(distanceCounter.currentValue).ToString() + " lysår!");
+
+        }
+
+        if (timeLeft <= 0 && Input.GetKeyDown(KeyCode.Space))
+        {
             SceneManager.LoadSceneAsync(1);
         }
     }
-
 }
