@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class G1Timer : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class G1Timer : MonoBehaviour
         else
         {
             text.text = "00:00";
+        }
+
+        if (timeLeft <= 0) 
+        {
+            SceneManager.LoadSceneAsync(1);
         }
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 public class G1DistanceCounter : MonoBehaviour
 {
     public TMP_Text text;          
-    public float countSpeed = 1f;   
+    public float countSpeed = 1.1f;   
 
 
     private float currentValue = 0f;
