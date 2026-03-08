@@ -299,7 +299,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: startTime
-      value: 300
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5378997305599321410, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: timer

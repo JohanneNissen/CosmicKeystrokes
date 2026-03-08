@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SparkMovement : MonoBehaviour
 {
@@ -57,7 +58,13 @@ public class SparkMovement : MonoBehaviour
                 spark.transform.position = currentWP.transform.position;
                 return;
             }
-            currentWP = destination;
+            if (destination.GetComponent<WaypointManager>().number == 6)
+            {
+                SceneManager.LoadSceneAsync(1);
+
+            }
+
+                currentWP = destination;
             index = 0;
             currentWPmanager = destination.GetComponent<WaypointManager>();
             current = destination.GetComponent<WaypointManager>().number;

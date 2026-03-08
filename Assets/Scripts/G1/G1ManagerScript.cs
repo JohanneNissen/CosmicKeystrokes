@@ -26,7 +26,7 @@ public class G1ManagerScript : MonoBehaviour
             flameMain = flameEffect.main;
     }
 
-    /*private void Start()
+    private void Start()
     {
         //StartCoroutine(PlayNextWord());
     }
