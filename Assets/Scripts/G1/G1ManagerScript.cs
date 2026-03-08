@@ -7,7 +7,7 @@ public class G1ManagerScript : MonoBehaviour
     
     public AudioSource source;
     public HashTest ord;
-    public AudioClip n�steOrd;
+    public AudioClip næsteOrd;
 
     public ScrollUV starfieldFront;
     public G1Timer timer;
