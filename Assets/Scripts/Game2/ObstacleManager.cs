@@ -30,12 +30,10 @@ public class ObstacleManager : MonoBehaviour
         if (obstacle.transform.position == posClose)
         {
             closed = true;
-            connectedPath.GetComponent<PathManager>().isBlocked = true;
         } 
         else if (obstacle.transform.position == posOpen)
         {
             closed= false;
-            connectedPath.GetComponent<PathManager>().isBlocked = false;
         }
     }
 
@@ -60,12 +58,12 @@ public class ObstacleManager : MonoBehaviour
             if (obstacle.transform.position == posOpen)
             {
                 closed = false;
-                connectedPath.GetComponent<PathManager>().isBlocked = false;
+                connectedPath.GetComponent<PathManager>().ObsOpen += 1;
             }
             if (obstacle.transform.position == posClose)
             {
                 closed = true;
-                connectedPath.GetComponent<PathManager>().isBlocked = true;
+                connectedPath.GetComponent<PathManager>().ObsOpen -= 1;
             }
         }
     }
