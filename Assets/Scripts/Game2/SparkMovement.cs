@@ -8,6 +8,7 @@ public class SparkMovement : MonoBehaviour
 
     public GameObject spark;
     public List<GameObject> MainWP;
+    public Game2Manager game2manager;
     private WaypointManager currentWPmanager;
     private GameObject currentWP;
     private GameObject destination;
@@ -16,12 +17,14 @@ public class SparkMovement : MonoBehaviour
     int index = 0;
     bool isMoving = false;
     public float speed = 100f;
+    bool gameRunning;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         currentWP = MainWP[0];
         currentWPmanager = MainWP[0].GetComponent<WaypointManager>();
+        gameRunning = true;
     }
 
     // Update is called once per frame
@@ -29,6 +32,11 @@ public class SparkMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            if (gameRunning == false)
+            {
+                return;
+            }
+
             DetermineDestination();
         }
 
@@ -60,8 +68,8 @@ public class SparkMovement : MonoBehaviour
             }
             if (destination.GetComponent<WaypointManager>().number == 6)
             {
-                SceneManager.LoadSceneAsync(1);
-
+                gameRunning = false;
+                game2manager.gameRunning = false;
             }
 
                 currentWP = destination;

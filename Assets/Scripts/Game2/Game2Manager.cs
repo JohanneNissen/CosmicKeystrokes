@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Game2Manager : MonoBehaviour
@@ -12,6 +13,10 @@ public class Game2Manager : MonoBehaviour
     public int minCom;
     public int maxCom;
     public List<string> usedwords;
+
+    public bool gameRunning;
+    public TMP_Text endText;
+    public TMP_Text instruks;
 
     public TMP_Text yellowText;
     public TMP_Text blueText;
@@ -47,6 +52,8 @@ public class Game2Manager : MonoBehaviour
         yellow.textBox = yellowText;
         blue.textBox = blueText;
         green.textBox = greenText;
+        endText.gameObject.SetActive(false);
+        gameRunning = true;
 
         colorwords = new colorWord[3] { yellow, blue, green };
         foreach (var cw in colorwords)
@@ -61,6 +68,26 @@ public class Game2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!inputField.isFocused)
+        {
+            FocusInputField();
+        }
+
+        if (gameRunning == false)
+        {
+            yellowText.gameObject.SetActive(false);
+            blueText.gameObject.SetActive(false);
+            greenText.gameObject.SetActive(false);
+            inputField.gameObject.SetActive(false);
+            instruks.gameObject.SetActive(false);
+            endText.gameObject.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && gameRunning == false)
+        {
+            SceneManager.LoadSceneAsync(1);
+        }
+
         if (EventSystem.current.currentSelectedGameObject == inputField.gameObject && Input.GetKeyDown(KeyCode.Space))
         {
             SubmitInput();
@@ -100,6 +127,11 @@ public class Game2Manager : MonoBehaviour
         }
     }
 
+    void FocusInputField()
+    {
+        inputField.ActivateInputField();
+        inputField.Select();
+    }
     private char ValidateChar(string text, int charindex, char addchar)
     {
         if (addchar == ' ')
