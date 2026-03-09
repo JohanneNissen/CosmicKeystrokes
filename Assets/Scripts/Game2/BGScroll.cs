@@ -11,7 +11,7 @@ public class BGScroll : MonoBehaviour
         Material mat = mr.material;
         Vector2 offset = mat.mainTextureOffset;
 
-        offset.y = offset.y + .001f *parralax;
+        offset.y = offset.y + .001f;
         mat.mainTextureOffset = offset;
 
 
