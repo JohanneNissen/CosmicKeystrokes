@@ -15,6 +15,7 @@ public class G1Timer : MonoBehaviour
     //Text boxes for game finish
     public TMP_Text endScreen;
     public TMP_Text backtext;
+    public TMP_Text instruksText;
 
     void Start()
     {
@@ -43,6 +44,7 @@ public class G1Timer : MonoBehaviour
             managerScript.gameRunning = false;
             endScreen.gameObject.SetActive(true);
             backtext.gameObject.SetActive(true);
+            instruksText.gameObject.SetActive(false);
             endScreen.text = ("Tillykke, du har rejst: " + Mathf.FloorToInt(distanceCounter.currentValue).ToString() + " lysår!");
 
         }
