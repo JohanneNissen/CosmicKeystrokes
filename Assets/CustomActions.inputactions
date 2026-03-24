@@ -29,6 +29,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "G2.5",
+            "id": "316af85f-6264-40d0-95b0-d5aa37afd5ed",
+            "actions": [
+                {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "b78eb51b-3903-4909-8b11-bd0e10668db8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "59845243-96b1-44e4-86a1-355baa81ddca",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
