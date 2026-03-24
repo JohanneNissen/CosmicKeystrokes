@@ -115,6 +115,34 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""G2.5"",
+            ""id"": ""316af85f-6264-40d0-95b0-d5aa37afd5ed"",
+            ""actions"": [
+                {
+                    ""name"": ""Submit"",
+                    ""type"": ""Button"",
+                    ""id"": ""b78eb51b-3903-4909-8b11-bd0e10668db8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""59845243-96b1-44e4-86a1-355baa81ddca"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Submit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -183,11 +211,15 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
         // GameHubActions
         m_GameHubActions = asset.FindActionMap("GameHubActions", throwIfNotFound: true);
         m_GameHubActions_Move = m_GameHubActions.FindAction("Move", throwIfNotFound: true);
+        // G2.5
+        m_G25 = asset.FindActionMap("G2.5", throwIfNotFound: true);
+        m_G25_Submit = m_G25.FindAction("Submit", throwIfNotFound: true);
     }
 
     ~@CustomActions()
     {
         UnityEngine.Debug.Assert(!m_GameHubActions.enabled, "This will cause a leak and performance issues, CustomActions.GameHubActions.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_G25.enabled, "This will cause a leak and performance issues, CustomActions.G25.Disable() has not been called.");
     }
 
     /// <summary>
@@ -355,6 +387,102 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="GameHubActionsActions" /> instance referencing this action map.
     /// </summary>
     public GameHubActionsActions @GameHubActions => new GameHubActionsActions(this);
+
+    // G2.5
+    private readonly InputActionMap m_G25;
+    private List<IG25Actions> m_G25ActionsCallbackInterfaces = new List<IG25Actions>();
+    private readonly InputAction m_G25_Submit;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "G2.5".
+    /// </summary>
+    public struct G25Actions
+    {
+        private @CustomActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public G25Actions(@CustomActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "G25/Submit".
+        /// </summary>
+        public InputAction @Submit => m_Wrapper.m_G25_Submit;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_G25; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="G25Actions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(G25Actions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="G25Actions" />
+        public void AddCallbacks(IG25Actions instance)
+        {
+            if (instance == null || m_Wrapper.m_G25ActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_G25ActionsCallbackInterfaces.Add(instance);
+            @Submit.started += instance.OnSubmit;
+            @Submit.performed += instance.OnSubmit;
+            @Submit.canceled += instance.OnSubmit;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="G25Actions" />
+        private void UnregisterCallbacks(IG25Actions instance)
+        {
+            @Submit.started -= instance.OnSubmit;
+            @Submit.performed -= instance.OnSubmit;
+            @Submit.canceled -= instance.OnSubmit;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="G25Actions.UnregisterCallbacks(IG25Actions)" />.
+        /// </summary>
+        /// <seealso cref="G25Actions.UnregisterCallbacks(IG25Actions)" />
+        public void RemoveCallbacks(IG25Actions instance)
+        {
+            if (m_Wrapper.m_G25ActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="G25Actions.AddCallbacks(IG25Actions)" />
+        /// <seealso cref="G25Actions.RemoveCallbacks(IG25Actions)" />
+        /// <seealso cref="G25Actions.UnregisterCallbacks(IG25Actions)" />
+        public void SetCallbacks(IG25Actions instance)
+        {
+            foreach (var item in m_Wrapper.m_G25ActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_G25ActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="G25Actions" /> instance referencing this action map.
+    /// </summary>
+    public G25Actions @G25 => new G25Actions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -434,5 +562,20 @@ public partial class @CustomActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "G2.5" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="G25Actions.AddCallbacks(IG25Actions)" />
+    /// <seealso cref="G25Actions.RemoveCallbacks(IG25Actions)" />
+    public interface IG25Actions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Submit" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSubmit(InputAction.CallbackContext context);
     }
 }
