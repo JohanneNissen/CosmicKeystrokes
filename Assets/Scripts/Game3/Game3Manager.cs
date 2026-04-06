@@ -8,10 +8,12 @@ public class Game3Manager : MonoBehaviour
     public KeyboardManager keyboardmanager;
 
     public WordGenerator wordgenerator;
-    private string currentword;
+    public string currentword;
+    public string typedword = "";
     public int comMin;
     public int comMax;
     public List<string> usedWords;
+    private int cindex = 0;
 
     public TMP_Text robotText;
     public Image robot;
@@ -64,6 +66,8 @@ public class Game3Manager : MonoBehaviour
                         keyboard.gameObject.SetActive(true);
                         robot.gameObject.SetActive(false);
                         textbox.gameObject.SetActive(false);
+                        currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+                        keyboardmanager.HighlightKey(currentword[cindex].ToString());
                         gameRunning = true;
                         break;
                 }
@@ -92,6 +96,34 @@ public class Game3Manager : MonoBehaviour
                     introcount = 5;
                     robotText.text = intro5;
                 }
+            }
+        }
+
+        if (gameRunning)
+        {
+            string input = Input.inputString;
+
+            foreach (char c in input)
+            {
+                if (cindex < currentword.Length && char.ToUpper(c) == char.ToUpper(currentword[cindex]))
+                {
+                    typedword += c;
+                    cindex++;
+                    keyboardmanager.ResetKeys();
+                    if (cindex < currentword.Length)
+                    {
+                        keyboardmanager.HighlightKey(currentword[cindex].ToString());
+                    }
+                }
+            }
+
+            if (typedword.ToLower() == currentword.ToLower())
+            {
+                cindex = 0;
+                typedword = "";
+                keyboardmanager.ResetKeys();
+                currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+                keyboardmanager.HighlightKey(currentword[cindex].ToString());
             }
         }
     }
