@@ -1,9 +1,14 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class KeyboardManager : MonoBehaviour
 {
     private Dictionary<string, GameObject> keyDict;
+    public Color highlightColor;
+    public Color baseColor;
+    private string currentHighlightedKey = "";
 
     private void Awake()
     {
@@ -30,10 +35,11 @@ public class KeyboardManager : MonoBehaviour
     public void HighlightKey(string letter)
     {
         letter = letter.ToUpper();
+        currentHighlightedKey = letter;
 
         if (keyDict.TryGetValue(letter, out GameObject key))
         {
-            key.SetActive(true);
+            key.GetComponent<Image>().color = highlightColor;
         }
         else
         {
@@ -43,9 +49,31 @@ public class KeyboardManager : MonoBehaviour
 
     public void ResetKeys()
     {
+        currentHighlightedKey = "";
         foreach (var key in keyDict.Values)
         {
-            key.SetActive(false);
+            key.GetComponent<Image>().color = baseColor;
         }
     }
+
+    public IEnumerator PulseKey(string letter)
+    {
+        if (keyDict.TryGetValue(letter.ToUpper(), out GameObject key))
+        {
+            Image img = key.GetComponent<Image>();
+
+            img.color = Color.yellow;
+            yield return new WaitForSeconds(0.1f);
+
+            if (letter == currentHighlightedKey)
+            {
+                img.color = highlightColor;
+            }
+            else
+            {
+                img.color = baseColor;
+            }
+        }
+    }
+
 }

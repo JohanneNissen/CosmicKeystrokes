@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -13,7 +14,7 @@ public class Game3Manager : MonoBehaviour
     public int comMin;
     public int comMax;
     public List<string> usedWords;
-    private int cindex = 0;
+    public int cindex = 0;
 
     public TMP_Text robotText;
     public Image robot;
@@ -28,6 +29,7 @@ public class Game3Manager : MonoBehaviour
     string intro5 = "Nu er maskinen klar til at printe frokost. Husk at bruge 10-finger systemet, og prøv ikke at kigge på dit keyboard. De bedste astronauter har et viskestykke over deres hænder. Tryk på mellemrum, når du er klar til at starte.";
 
     bool gameRunning;
+    bool isTransitioning = false;
 
     void Start()
     {
@@ -99,7 +101,7 @@ public class Game3Manager : MonoBehaviour
             }
         }
 
-        if (gameRunning)
+        if (gameRunning && !isTransitioning)
         {
             string input = Input.inputString;
 
@@ -107,24 +109,45 @@ public class Game3Manager : MonoBehaviour
             {
                 if (cindex < currentword.Length && char.ToUpper(c) == char.ToUpper(currentword[cindex]))
                 {
+                    string pressedkey = c.ToString().ToUpper();
+
                     typedword += c;
                     cindex++;
                     keyboardmanager.ResetKeys();
+
                     if (cindex < currentword.Length)
                     {
                         keyboardmanager.HighlightKey(currentword[cindex].ToString());
                     }
+
+                    StartCoroutine(keyboardmanager.PulseKey(pressedkey));
                 }
             }
 
             if (typedword.ToLower() == currentword.ToLower())
             {
-                cindex = 0;
+                /*cindex = 0;
                 typedword = "";
                 keyboardmanager.ResetKeys();
                 currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
-                keyboardmanager.HighlightKey(currentword[cindex].ToString());
+                keyboardmanager.HighlightKey(currentword[cindex].ToString());*/
+
+                StartCoroutine(nextWord());
             }
         }
+    }
+
+    IEnumerator nextWord()
+    {
+        isTransitioning = true;
+        yield return new WaitForSeconds(0.12f);
+
+        cindex = 0;
+        typedword = "";
+        keyboardmanager.ResetKeys();
+        currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+        keyboardmanager.HighlightKey(currentword[cindex].ToString());
+
+        isTransitioning = false;
     }
 }

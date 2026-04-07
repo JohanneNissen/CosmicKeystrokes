@@ -904,9 +904,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game3Manager
   keyboardmanager: {fileID: 2122694654}
   wordgenerator: {fileID: 462459536}
+  currentword: 
+  typedword: 
   comMin: 0
   comMax: 0
   usedWords: []
+  cindex: 0
   robotText: {fileID: 841359866}
   robot: {fileID: 862992584}
   textbox: {fileID: 206083380}
@@ -920,7 +923,7 @@ Transform:
   m_GameObject: {fileID: 462459533}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 969.1379, y: 0, z: 1558.1306}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3428,6 +3431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f73febabc6e194742929d4d46acde4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Game3Manager
+  highlightColor: {r: 0.5529412, g: 0.8196079, b: 0.50980395, a: 1}
+  baseColor: {r: 0.52156866, g: 0.7137255, b: 0.8000001, a: 1}
 --- !u!1 &2130454405
 GameObject:
   m_ObjectHideFlags: 0
