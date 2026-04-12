@@ -26,30 +26,34 @@ public class G1Timer : MonoBehaviour
 
     void Update()
     {
-        if (timeLeft > 0)
+        if (managerScript.gameRunning)
         {
-            timeLeft -= Time.deltaTime;
-            int minutes = Mathf.FloorToInt(timeLeft / 60);
-            int seconds = Mathf.FloorToInt(timeLeft % 60);
-            text.text = $"{minutes:00}:{seconds:00}";
-        }
-        else
-        {
-            text.text = "00:00";
+            if (timeLeft > 0)
+            {
+                timeLeft -= Time.deltaTime;
+                int minutes = Mathf.FloorToInt(timeLeft / 60);
+                int seconds = Mathf.FloorToInt(timeLeft % 60);
+                text.text = $"{minutes:00}:{seconds:00}";
+            }
+            else
+            {
+                text.text = "00:00";
+            }
+
+            if (timeLeft <= 0)
+            {
+                distanceCounter.gameRunning = false;
+                managerScript.gameRunning = false;
+                endScreen.gameObject.SetActive(true);
+                backtext.gameObject.SetActive(true);
+                instruksText.gameObject.SetActive(false);
+                //managerScript.Robot.gameObject.SetActive(true);
+                endScreen.text = ("Tillykke, du har rejst: " + Mathf.FloorToInt(distanceCounter.currentValue).ToString() + " lysår!");
+
+            }
         }
 
-        if (timeLeft <= 0) 
-        {
-            distanceCounter.gameRunning = false;
-            managerScript.gameRunning = false;
-            endScreen.gameObject.SetActive(true);
-            backtext.gameObject.SetActive(true);
-            instruksText.gameObject.SetActive(false);
-            endScreen.text = ("Tillykke, du har rejst: " + Mathf.FloorToInt(distanceCounter.currentValue).ToString() + " lysår!");
-
-        }
-
-        if (timeLeft <= 0 && Input.GetKeyDown(KeyCode.Space))
+        if (timeLeft <= 0 && Input.GetKeyDown(KeyCode.Return))
         {
             SceneManager.LoadSceneAsync(1);
         }
