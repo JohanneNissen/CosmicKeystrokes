@@ -1317,6 +1317,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 186905608167778062, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: backtext
       value: 
@@ -1327,7 +1331,7 @@ PrefabInstance:
       objectReference: {fileID: 333544262}
     - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: startTime
-      value: 180
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 225498633825072946, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: instruksText
