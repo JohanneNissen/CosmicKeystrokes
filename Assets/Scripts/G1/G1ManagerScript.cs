@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class G1ManagerScript : MonoBehaviour
 {
@@ -26,6 +27,18 @@ public class G1ManagerScript : MonoBehaviour
     public int maxCom;
     public List<string> usedwords;
 
+    public Image Robot;
+    public TMP_Text introText;
+    public Sprite RoboHello;
+    public Sprite RoboNormal;
+    public Sprite RoboHappy;
+    int introCount = 1;
+    string intro1 = "Velkommen! Kommandocentralen har inviteret dig til Rum-Kapflyvning! Det går ud på at flyve så mange lysår ud i rummet, som du kan, inden tiden løber ud.";
+    string intro2 = "For at flyve hurtigere, skal du booste dit rumskibs motor ved at de ord, som rumskibet beder dig om. Ordene vil blive læst højt og så er det dit job at stave og sende dem til motoren.";
+    string intro3 = "Når du har skrevet ordet, som er blevet læst højt, så tryk på MELLEMRUM for at sende det til motoren. Hvis ordet er rigtigt får du er boost!";
+    string intro4 = "Hvis du ikke hørte ordet, kan du trykke på SHIFT for at høre det igen. Hvis du vil have et andet ord så tryk på CONTROL, så sender rumskibet et nyt ord til dig.";
+    string intro5 = "Husk at have lyd på, ellers bliver det svært at høre, hvilket ord, du skal skrive. Held og lykke pilot! Tryk på MELLEMRUM, når du er klar til at starte og lad os se, hvor langt du kan flyve!";
+
     public TMP_InputField inputField;
     public bool gameRunning;
 
@@ -43,67 +56,95 @@ public class G1ManagerScript : MonoBehaviour
 
     private void Start()
     {
-        currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
-        FocusInputField();
-        StartCoroutine(PlayNextWord());
-        gameRunning = true;
+        
     }
 
     private void Update()
     {
-        if (!inputField.isFocused)
+        if (!gameRunning && Input.GetKeyDown(KeyCode.Space))
         {
-            FocusInputField();
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
-        {
-            if (gameRunning == false)
+            introCount++;
+            switch (introCount)
             {
-                return;
+                case 1:
+                    introText.text = intro1;
+                    break;
+                case 2:
+                    Robot.GetComponent<Image>().sprite = RoboNormal;
+                    introText.text = intro2;
+                    break;
+                case 3:
+                    introText.text = intro3;
+                    break;
+                case 4:
+                    introText.text = intro4;
+                    break;
+                case 5:
+                    introText.text = intro5;
+                    Robot.GetComponent<Image>().sprite = RoboHappy;
+                    break;
+                case 6:
+                    StartGame();
+                    break;
             }
-            ReplayCurrentWord();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+        if (gameRunning)
         {
-            if (gameRunning == false)
+            if (!inputField.isFocused)
             {
-                return;
+                FocusInputField();
             }
-            currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
-            StartCoroutine(PlayNextWord());
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SubmitInput();
-            if (typedword == currentWord)
+            if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
             {
-                Debug.Log("word was correct");
-                IncreaseSpeed();
-                if (maxCom < 60)
+                if (gameRunning == false)
                 {
-                    minCom++;
-                    maxCom++;
+                    return;
+                }
+                ReplayCurrentWord();
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl))
+            {
+                if (gameRunning == false)
+                {
+                    return;
                 }
                 currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
                 StartCoroutine(PlayNextWord());
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("incorrect word");
-                DecreaseSpeed();
-                if (minCom >= 10)
+                SubmitInput();
+                if (typedword == currentWord)
                 {
-                    minCom--;
-                    maxCom--;
+                    Debug.Log("word was correct");
+                    IncreaseSpeed();
+                    if (maxCom < 60)
+                    {
+                        minCom++;
+                        maxCom++;
+                    }
+                    currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                    StartCoroutine(PlayNextWord());
                 }
-                currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
-                StartCoroutine(PlayNextWord());
+                else
+                {
+                    Debug.Log("incorrect word");
+                    DecreaseSpeed();
+                    if (minCom >= 10)
+                    {
+                        minCom--;
+                        maxCom--;
+                    }
+                    currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+                    StartCoroutine(PlayNextWord());
+                }
             }
         }
-        if (gameRunning == false)
+        if (!gameRunning)
         {
             inputField.gameObject.SetActive(false);
         }
@@ -173,5 +214,15 @@ public class G1ManagerScript : MonoBehaviour
     {
         source.clip = currentwordAU;
         source.Play();
+    }
+
+    void StartGame()
+    {
+        Robot.gameObject.SetActive(false);
+        inputField.gameObject.SetActive(true);
+        gameRunning = true;
+        currentWord = wordgenerator.GenerateWord(minCom, maxCom, usedwords);
+        FocusInputField();
+        StartCoroutine(PlayNextWord());
     }
 }
