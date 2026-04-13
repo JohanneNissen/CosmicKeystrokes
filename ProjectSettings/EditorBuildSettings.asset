@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game2Scene.unity
     guid: ef0e626491b42f6438db158fdcf9ea17
+  - enabled: 1
+    path: Assets/Scenes/Game3Scene.unity
+    guid: 0c4da25eb67743a4d955c63cb8626923
+  - enabled: 1
+    path: Assets/Scenes/10FingerIntro.unity
+    guid: 8c62ee9baead6ba479fb50cae35354bb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
