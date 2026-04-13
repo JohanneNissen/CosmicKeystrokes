@@ -1850,6 +1850,10 @@ PrefabInstance:
       propertyPath: distanceCounter
       value: 
       objectReference: {fileID: 675498920}
+    - target: {fileID: 1550780752638749068, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
+      propertyPath: currentValue
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3444186195093155910, guid: 20408ef23a5451d48ae8049ba64294de, type: 3}
       propertyPath: m_IgnoreReversedGraphics
       value: 0
