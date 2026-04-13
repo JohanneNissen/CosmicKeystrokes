@@ -33,10 +33,10 @@ public class Game3Manager : MonoBehaviour
     string intro2 = "Maden bliver lavet på vores mad-printer. Hver gang maskinen skal printe en frokost skal den bruge et ord for at starte produktionen. Desværre er maskinen gammel og kan kun tage et bogstav ad gangen.";
     string intro3 = "På skærmen kan du se, hvilket bogstav maskinen skal bruge. Tryk på bogstavet på dit keyboard. Når alle bogstaverne er sendt til maskinen, kan den printe en lækker rum frokost.";
     string intro4 = "Inden du starter, skal vi lige indstille maskinen. Tryk på 1, 2 eller 3 for at vælge en sværhedgrad at sætte maskinen på.";
-    string intro5 = "Nu er maskinen klar til at printe frokost. Husk at bruge 10-finger systemet, og prøv ikke at kigge på dit keyboard. De bedste astronauter har et viskestykke over deres hænder. Tryk på mellemrum, når du er klar til at starte.";
+    string intro5 = "Nu er maskinen klar til at printe frokost. Husk at bruge 10-finger systemet, og prøv ikke at kigge på dit keyboard. De bedste astronauter har et viskestykke over deres hænder. Tryk på ENTER, når du er klar til at starte.";
     string end1 = "Wow, sikke meget mad. Godt klaret! Her er hvordan du klarede dig: ";
 
-    string normalCon = "Tryk på MELLEMRUM for at fortsætte";
+    string normalCon = "Tryk på ENTER for at fortsætte";
     string diffCon = "Tryk på 1, 2 eller 3 for at fortsætte";
 
     int hit = 0;
@@ -63,7 +63,7 @@ public class Game3Manager : MonoBehaviour
     {
         if (!gameRunning)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && introcount != 4)
+            if (Input.GetKeyDown(KeyCode.Return) && introcount != 4)
             {
                 introcount++;
                 switch (introcount)
@@ -226,6 +226,6 @@ public class Game3Manager : MonoBehaviour
         keyboard.gameObject.SetActive(false);
         robot.gameObject.SetActive(true);
         textbox.gameObject.SetActive(true);
-        robotText.text = end1 + acc + "% accuracy og " + totalwords + " ord skrevet. Tryk på MELLEMRUM for at gå tilbage til centralen.";
+        robotText.text = end1 + acc + "% accuracy og " + totalwords + " ord skrevet. Tryk på ENTER for at gå tilbage til centralen.";
     }
 }
