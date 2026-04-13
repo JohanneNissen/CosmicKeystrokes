@@ -2310,10 +2310,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Velkommen til din introduktion af 10-finger systemet. Jeg fort\xE6ller
-    dig et step ad gangen, hvordan det fungerer. n\xE5r du er klar til at g\xE5 videre
-    til n\xE6ste step, s\xE5 tryk p\xE5 MELLEMRUM. Tryk p\xE5 MELLEMRUM nu for at
-    begynde."
+  m_text: "Velkommen til din introduktion af 10-finger systemet. Jeg hedder Astro
+    og er din Robo-Guide. Jeg fort\xE6ller dig et step af gangen, hvordan det fungerer.
+    N\xE5r du er klar til at g\xE5 videre til n\xE6ste step, s\xE5 tryk p\xE5 MELLEMRUM."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
