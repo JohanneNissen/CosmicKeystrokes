@@ -61,7 +61,7 @@ public class G1ManagerScript : MonoBehaviour
 
     private void Update()
     {
-        if (!gameRunning && Input.GetKeyDown(KeyCode.Space))
+        if (!gameRunning && Input.GetKeyDown(KeyCode.Return))
         {
             introCount++;
             switch (introCount)
@@ -195,6 +195,7 @@ public class G1ManagerScript : MonoBehaviour
         {
             starfieldFront.parralax = 12f;
         }
+
     }
 
 
