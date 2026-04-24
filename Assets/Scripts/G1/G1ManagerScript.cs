@@ -34,10 +34,10 @@ public class G1ManagerScript : MonoBehaviour
     public Sprite RoboHappy;
     int introCount = 1;
     string intro1 = "Velkommen! Kommandocentralen har inviteret dig til Rum-Kapflyvning! Det går ud på at flyve så mange lysår ud i rummet, som du kan, inden tiden løber ud.";
-    string intro2 = "For at flyve hurtigere, skal du booste dit rumskibs motor ved at de ord, som rumskibet beder dig om. Ordene vil blive læst højt og så er det dit job at stave og sende dem til motoren.";
+    string intro2 = "For at flyve hurtigere, skal du booste dit rumskibs motor ved at skrive de ord, som rumskibet beder dig om. Ordene vil blive læst højt og så er det dit job at stave og sende dem til motoren.";
     string intro3 = "Når du har skrevet ordet, som er blevet læst højt, så tryk på MELLEMRUM for at sende det til motoren. Hvis ordet er rigtigt får du er boost!";
     string intro4 = "Hvis du ikke hørte ordet, kan du trykke på SHIFT for at høre det igen. Hvis du vil have et andet ord så tryk på CONTROL, så sender rumskibet et nyt ord til dig.";
-    string intro5 = "Husk at have lyd på, ellers bliver det svært at høre, hvilket ord, du skal skrive. Held og lykke pilot! Tryk på MELLEMRUM, når du er klar til at starte og lad os se, hvor langt du kan flyve!";
+    string intro5 = "Husk at have lyd på, ellers bliver det svært at høre, hvilket ord, du skal skrive. Held og lykke pilot! Tryk på ENTER, når du er klar til at starte og lad os se, hvor langt du kan flyve!";
 
     public TMP_InputField inputField;
     public bool gameRunning;
