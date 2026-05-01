@@ -32,6 +32,20 @@ public class KeyboardManager : MonoBehaviour
         
     }
 
+    public Transform GetKeyTransform(string letter)
+    {
+        letter = letter.ToUpper();
+        if (keyDict.TryGetValue(letter, out GameObject key))
+        {
+            Transform keyTransform = key.transform;
+            return keyTransform;
+        }
+        else
+        {
+            return null;
+        }
+    }
+
     public void HighlightKey(string letter)
     {
         letter = letter.ToUpper();

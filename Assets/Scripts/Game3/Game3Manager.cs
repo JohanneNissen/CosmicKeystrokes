@@ -19,6 +19,7 @@ public class Game3Manager : MonoBehaviour
     public List<string> usedWords;
     private int cindex = 0;
 
+    //Keyboard Interface
     public TMP_Text robotText;
     public Image robot;
     public Image textbox;
@@ -28,6 +29,18 @@ public class Game3Manager : MonoBehaviour
     public Image diffPanel;
     public TMP_Text continuetext;
 
+    //Sound
+    public AudioSource BackgroundSource;
+    public AudioSource SFXSource;
+    public AudioClip keyWhosh;
+    public AudioClip bellDing;
+
+    //LetterAnimation
+    public GameObject flyingLetterPrefab;
+    public Transform flyingLetterParent;
+    public Transform targetFoodDispensor;
+
+    //Intro
     public int introcount = 1;
     string intro1 = "Velkommen til rumstationens kantine. Vores astronauter skal have en god frokost, inden de bliver sendt på mission. Desværre er vores kok blevet syg med rum-kopper. Vi skal bruge din hjælp til at lave mad til astronauterne.";
     string intro2 = "Maden bliver lavet på vores mad-printer. Hver gang maskinen skal printe en frokost skal den bruge et ord for at starte produktionen. Desværre er maskinen gammel og kan kun tage et bogstav ad gangen.";
@@ -56,6 +69,7 @@ public class Game3Manager : MonoBehaviour
         keyboardmanager.ResetKeys();
         keyboard.gameObject.SetActive(false);
         robotText.text = intro1;
+        SFXSource.volume = 0.8f;
     }
 
 
@@ -141,8 +155,8 @@ public class Game3Manager : MonoBehaviour
                 if (cindex < currentword.Length && char.ToUpper(c) == char.ToUpper(currentword[cindex]))
                 {
                     string pressedkey = c.ToString().ToUpper();
-                    hit++;
-
+                    hit++;                    
+                    SpawnFlyingLetter(c, keyboardmanager.GetKeyTransform(pressedkey));
                     typedword += c;
                     display.text = typedword;
                     cindex++;
@@ -166,6 +180,7 @@ public class Game3Manager : MonoBehaviour
             if (typedword.ToLower() == currentword.ToLower())
             {
                 totalwords++;
+                SFXSource.PlayOneShot(bellDing);
                 StartCoroutine(GreenFlash(displayback));
                 StartCoroutine(nextWord());
             }
@@ -219,6 +234,14 @@ public class Game3Manager : MonoBehaviour
         Debug.Log("Accuracy: " + acc);
     }
 
+
+    public void SpawnFlyingLetter(char letter, Transform keyTransform)
+    {
+        GameObject obj = Instantiate(flyingLetterPrefab, keyTransform.position, Quaternion.identity, flyingLetterParent);
+        LetterThrower throwScript = obj.GetComponent<LetterThrower>();
+        throwScript.Init(letter, targetFoodDispensor);
+        SFXSource.PlayOneShot(keyWhosh);
+    }
     void EndGame()
     {
         gameRunning = false;
