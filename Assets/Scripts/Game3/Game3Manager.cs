@@ -34,8 +34,10 @@ public class Game3Manager : MonoBehaviour
     //Sound
     public AudioSource BackgroundSource;
     public AudioSource SFXSource;
+    //public AudioClip backgroundMusic;
     public AudioClip keyWhosh;
     public AudioClip bellDing;
+    bool musicPlaying = false;
 
     //LetterAnimation
     public GameObject flyingLetterPrefab;
@@ -62,16 +64,18 @@ public class Game3Manager : MonoBehaviour
     public float gameTime = 120f;
     public float currentTime;
 
-    bool gameRunning;
+    bool gameRunning = false;
     bool isTransitioning = false;
 
     void Start()
     {
+        SFXSource.volume = 0.8f;
+        BackgroundSource.volume = 0.3f;
+        BackgroundSource.loop = true;
         gameRunning = false;
         keyboardmanager.ResetKeys();
         keyboard.gameObject.SetActive(false);
         robotText.text = intro1;
-        SFXSource.volume = 0.8f;
     }
 
 
@@ -147,6 +151,18 @@ public class Game3Manager : MonoBehaviour
                     robotText.text = intro5;
                 }
             }
+        }
+
+        if (gameRunning && !musicPlaying)
+        {
+            BackgroundSource.Play();
+            musicPlaying = true;
+        }
+
+        if (!gameRunning && musicPlaying)
+        {
+            BackgroundSource.Stop();
+            musicPlaying = false;
         }
 
         if (gameRunning && !isTransitioning)
