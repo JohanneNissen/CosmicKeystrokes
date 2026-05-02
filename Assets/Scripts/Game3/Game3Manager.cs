@@ -28,6 +28,8 @@ public class Game3Manager : MonoBehaviour
     public Image displayback;
     public Image diffPanel;
     public TMP_Text continuetext;
+    public TMP_Text BigDisplaytext;
+    public Image BigDisplayback;
 
     //Sound
     public AudioSource BackgroundSource;
@@ -102,6 +104,7 @@ public class Game3Manager : MonoBehaviour
                         robot.gameObject.SetActive(false);
                         textbox.gameObject.SetActive(false);
                         currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+                        BigDisplaytext.text = currentword;
                         keyboardmanager.HighlightKey(currentword[cindex].ToString());
                         currentTime = gameTime;
                         gameRunning = true;
@@ -182,6 +185,7 @@ public class Game3Manager : MonoBehaviour
                 totalwords++;
                 SFXSource.PlayOneShot(bellDing);
                 StartCoroutine(GreenFlash(displayback));
+                StartCoroutine(GreenFlash(BigDisplayback));
                 StartCoroutine(nextWord());
             }
         }
@@ -206,6 +210,7 @@ public class Game3Manager : MonoBehaviour
         display.text = typedword;
         keyboardmanager.ResetKeys();
         currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+        BigDisplaytext.text = currentword;
         keyboardmanager.HighlightKey(currentword[cindex].ToString());
         fooddispenser.addTray();
 
