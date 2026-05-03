@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Game3Manager : MonoBehaviour
 {
@@ -22,15 +23,15 @@ public class Game3Manager : MonoBehaviour
 
     //Keyboard Interface
     public TMP_Text robotText;
-    public Image robot;
-    public Image textbox;
-    public Image keyboard;
+    public UnityEngine.UI.Image robot;
+    public UnityEngine.UI.Image textbox;
+    public UnityEngine.UI.Image keyboard;
     public TMP_Text display;
-    public Image displayback;
-    public Image diffPanel;
+    public UnityEngine.UI.Image displayback;
+    public UnityEngine.UI.Image diffPanel;
     public TMP_Text continuetext;
     public TMP_Text BigDisplaytext;
-    public Image BigDisplayback;
+    public UnityEngine.UI.Image BigDisplayback;
 
     //Sound
     public AudioSource BackgroundSource;
@@ -127,30 +128,15 @@ public class Game3Manager : MonoBehaviour
                 continuetext.text = diffCon;
                 if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
-                    comMin = 10;
-                    comMax = 25;
-                    introcount = 5;
-                    diffPanel.gameObject.SetActive(false);
-                    continuetext.text = normalCon;
-                    robotText.text = intro5;
+                    setDiff1();
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
-                    comMin = 25;
-                    comMax = 40;
-                    introcount = 5;
-                    diffPanel.gameObject.SetActive(false);
-                    continuetext.text = normalCon;
-                    robotText.text = intro5;
+                    setDiff2();
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
-                    comMin = 40;
-                    comMax = 70;
-                    introcount = 5;
-                    diffPanel.gameObject.SetActive(false);
-                    continuetext.text = normalCon;
-                    robotText.text = intro5;
+                    setDiff3();
                 }
             }
         }
@@ -239,7 +225,7 @@ public class Game3Manager : MonoBehaviour
         isTransitioning = false;
     }
 
-    public IEnumerator GreenFlash(Image img)
+    public IEnumerator GreenFlash(UnityEngine.UI.Image img)
     {
             Color original = img.color;
             img.color = Color.green;
@@ -259,6 +245,37 @@ public class Game3Manager : MonoBehaviour
         acc = ((float)hit / total) * 100f;
 
         Debug.Log("Accuracy: " + acc);
+    }
+
+    public void setDiff1()
+    {
+        comMin = 10;
+        comMax = 25;
+        introcount = 5;
+        continueFromDiff();
+    }
+
+    public void setDiff2()
+    {
+        comMin = 25;
+        comMax = 40;
+        introcount = 5;
+        continueFromDiff();
+    }
+
+    public void setDiff3()
+    {
+        comMin = 40;
+        comMax = 70;
+        introcount = 5;
+        continueFromDiff();
+    }
+
+    void continueFromDiff()
+    {
+        diffPanel.gameObject.SetActive(false);
+        continuetext.text = normalCon;
+        robotText.text = intro5;
     }
 
 
