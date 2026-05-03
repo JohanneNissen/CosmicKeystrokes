@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -34,7 +35,8 @@ public class Game3Manager : MonoBehaviour
     //Sound
     public AudioSource BackgroundSource;
     public AudioSource SFXSource;
-    //public AudioClip backgroundMusic;
+    public AudioClip backgroundMusic;
+    public AudioClip menuMusic;
     public AudioClip keyWhosh;
     public AudioClip bellDing;
     bool musicPlaying = false;
@@ -70,7 +72,7 @@ public class Game3Manager : MonoBehaviour
     void Start()
     {
         SFXSource.volume = 0.8f;
-        BackgroundSource.volume = 0.3f;
+        BackgroundSource.volume = 0.05f;
         BackgroundSource.loop = true;
         gameRunning = false;
         keyboardmanager.ResetKeys();
@@ -155,13 +157,17 @@ public class Game3Manager : MonoBehaviour
 
         if (gameRunning && !musicPlaying)
         {
+            BackgroundSource.volume = 0.2f;
+            BackgroundSource.clip = backgroundMusic;
             BackgroundSource.Play();
             musicPlaying = true;
         }
 
         if (!gameRunning && musicPlaying)
         {
-            BackgroundSource.Stop();
+            BackgroundSource.volume = 0.05f;
+            BackgroundSource.clip = menuMusic;
+            BackgroundSource.Play();
             musicPlaying = false;
         }
 
