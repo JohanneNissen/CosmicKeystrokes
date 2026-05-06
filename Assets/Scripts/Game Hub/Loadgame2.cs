@@ -8,7 +8,7 @@ public class Loadgame2 : MonoBehaviour
         Debug.Log("enter");
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync(3);
+            SceneManager.LoadSceneAsync(5);
         }
 
 

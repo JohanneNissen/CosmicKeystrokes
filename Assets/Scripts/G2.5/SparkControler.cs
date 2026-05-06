@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SparkController : MonoBehaviour
 {
@@ -160,6 +161,16 @@ public class SparkController : MonoBehaviour
                 {
                     Instantiate(clickEffect, finalTarget, clickEffect.transform.rotation);
                 }
+
+                if (landingOnGoal)
+                {
+
+                    SceneManager.LoadSceneAsync(1);
+
+                }
+
+
+
                 break;
             }
 
@@ -185,26 +196,8 @@ public class SparkController : MonoBehaviour
         transform.position = finalTarget;
         isMoving = false;
 
-        // Check for win condition
-        CheckGoal();
+       
     }
 
-    private void CheckGoal()
-    {
-        // Check if we are currently on the goal
-        Collider[] hits = Physics.OverlapSphere(transform.position, 0.4f);
-        foreach (var col in hits)
-        {
-            if (col.CompareTag("Goal"))
-            {
-                Debug.Log("✅ Goal Reached!");
-                // Put your win logic here:
-                // - Show victory screen
-                // - Load next level
-                // - Play sound / particles
-                // Example: GameManager.Instance.LevelComplete();
-                return;
-            }
-        }
-    }
+    
 }
