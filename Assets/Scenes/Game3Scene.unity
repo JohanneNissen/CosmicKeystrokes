@@ -1769,9 +1769,6 @@ MonoBehaviour:
   display: {fileID: 1418697096}
   displayback: {fileID: 1217943653}
   diffPanel: {fileID: 1116878267}
-  diff1: {fileID: 0}
-  diff2: {fileID: 0}
-  diff3: {fileID: 0}
   continuetext: {fileID: 1549769433}
   BigDisplaytext: {fileID: 52112106}
   BigDisplayback: {fileID: 744787253}
@@ -3392,7 +3389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1116878265
 RectTransform:
   m_ObjectHideFlags: 0
