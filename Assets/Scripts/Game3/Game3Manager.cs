@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class Game3Manager : MonoBehaviour
 {
@@ -19,15 +21,33 @@ public class Game3Manager : MonoBehaviour
     public List<string> usedWords;
     private int cindex = 0;
 
+    //Keyboard Interface
     public TMP_Text robotText;
-    public Image robot;
-    public Image textbox;
-    public Image keyboard;
+    public UnityEngine.UI.Image robot;
+    public UnityEngine.UI.Image textbox;
+    public UnityEngine.UI.Image keyboard;
     public TMP_Text display;
-    public Image displayback;
-    public Image diffPanel;
+    public UnityEngine.UI.Image displayback;
+    public UnityEngine.UI.Image diffPanel;
     public TMP_Text continuetext;
+    public TMP_Text BigDisplaytext;
+    public UnityEngine.UI.Image BigDisplayback;
 
+    //Sound
+    public AudioSource BackgroundSource;
+    public AudioSource SFXSource;
+    public AudioClip backgroundMusic;
+    public AudioClip menuMusic;
+    public AudioClip keyWhosh;
+    public AudioClip bellDing;
+    bool musicPlaying = false;
+
+    //LetterAnimation
+    public GameObject flyingLetterPrefab;
+    public Transform flyingLetterParent;
+    public Transform targetFoodDispensor;
+
+    //Intro
     public int introcount = 1;
     string intro1 = "Velkommen til rumstationens kantine. Vores astronauter skal have en god frokost, inden de bliver sendt på mission. Desværre er vores kok blevet syg med rum-kopper. Vi skal bruge din hjælp til at lave mad til astronauterne.";
     string intro2 = "Maden bliver lavet på vores mad-printer. Hver gang maskinen skal printe en frokost skal den bruge et ord for at starte produktionen. Desværre er maskinen gammel og kan kun tage et bogstav ad gangen.";
@@ -47,11 +67,14 @@ public class Game3Manager : MonoBehaviour
     public float gameTime = 120f;
     public float currentTime;
 
-    bool gameRunning;
+    bool gameRunning = false;
     bool isTransitioning = false;
 
     void Start()
     {
+        SFXSource.volume = 0.8f;
+        BackgroundSource.volume = 0.05f;
+        BackgroundSource.loop = true;
         gameRunning = false;
         keyboardmanager.ResetKeys();
         keyboard.gameObject.SetActive(false);
@@ -88,6 +111,7 @@ public class Game3Manager : MonoBehaviour
                         robot.gameObject.SetActive(false);
                         textbox.gameObject.SetActive(false);
                         currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+                        BigDisplaytext.text = currentword;
                         keyboardmanager.HighlightKey(currentword[cindex].ToString());
                         currentTime = gameTime;
                         gameRunning = true;
@@ -104,32 +128,33 @@ public class Game3Manager : MonoBehaviour
                 continuetext.text = diffCon;
                 if (Input.GetKeyDown(KeyCode.Alpha1))
                 {
-                    comMin = 10;
-                    comMax = 25;
-                    introcount = 5;
-                    diffPanel.gameObject.SetActive(false);
-                    continuetext.text = normalCon;
-                    robotText.text = intro5;
+                    setDiff1();
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha2))
                 {
-                    comMin = 25;
-                    comMax = 40;
-                    introcount = 5;
-                    diffPanel.gameObject.SetActive(false);
-                    continuetext.text = normalCon;
-                    robotText.text = intro5;
+                    setDiff2();
                 }
                 else if (Input.GetKeyDown(KeyCode.Alpha3))
                 {
-                    comMin = 40;
-                    comMax = 70;
-                    introcount = 5;
-                    diffPanel.gameObject.SetActive(false);
-                    continuetext.text = normalCon;
-                    robotText.text = intro5;
+                    setDiff3();
                 }
             }
+        }
+
+        if (gameRunning && !musicPlaying)
+        {
+            BackgroundSource.volume = 0.2f;
+            BackgroundSource.clip = backgroundMusic;
+            BackgroundSource.Play();
+            musicPlaying = true;
+        }
+
+        if (!gameRunning && musicPlaying)
+        {
+            BackgroundSource.volume = 0.05f;
+            BackgroundSource.clip = menuMusic;
+            BackgroundSource.Play();
+            musicPlaying = false;
         }
 
         if (gameRunning && !isTransitioning)
@@ -141,8 +166,8 @@ public class Game3Manager : MonoBehaviour
                 if (cindex < currentword.Length && char.ToUpper(c) == char.ToUpper(currentword[cindex]))
                 {
                     string pressedkey = c.ToString().ToUpper();
-                    hit++;
-
+                    hit++;                    
+                    SpawnFlyingLetter(c, keyboardmanager.GetKeyTransform(pressedkey));
                     typedword += c;
                     display.text = typedword;
                     cindex++;
@@ -166,7 +191,9 @@ public class Game3Manager : MonoBehaviour
             if (typedword.ToLower() == currentword.ToLower())
             {
                 totalwords++;
+                SFXSource.PlayOneShot(bellDing);
                 StartCoroutine(GreenFlash(displayback));
+                StartCoroutine(GreenFlash(BigDisplayback));
                 StartCoroutine(nextWord());
             }
         }
@@ -191,13 +218,14 @@ public class Game3Manager : MonoBehaviour
         display.text = typedword;
         keyboardmanager.ResetKeys();
         currentword = wordgenerator.GenerateWord(comMin, comMax, usedWords);
+        BigDisplaytext.text = currentword;
         keyboardmanager.HighlightKey(currentword[cindex].ToString());
         fooddispenser.addTray();
 
         isTransitioning = false;
     }
 
-    public IEnumerator GreenFlash(Image img)
+    public IEnumerator GreenFlash(UnityEngine.UI.Image img)
     {
             Color original = img.color;
             img.color = Color.green;
@@ -219,6 +247,45 @@ public class Game3Manager : MonoBehaviour
         Debug.Log("Accuracy: " + acc);
     }
 
+    public void setDiff1()
+    {
+        comMin = 10;
+        comMax = 25;
+        introcount = 5;
+        continueFromDiff();
+    }
+
+    public void setDiff2()
+    {
+        comMin = 25;
+        comMax = 40;
+        introcount = 5;
+        continueFromDiff();
+    }
+
+    public void setDiff3()
+    {
+        comMin = 40;
+        comMax = 70;
+        introcount = 5;
+        continueFromDiff();
+    }
+
+    void continueFromDiff()
+    {
+        diffPanel.gameObject.SetActive(false);
+        continuetext.text = normalCon;
+        robotText.text = intro5;
+    }
+
+
+    public void SpawnFlyingLetter(char letter, Transform keyTransform)
+    {
+        GameObject obj = Instantiate(flyingLetterPrefab, keyTransform.position, Quaternion.identity, flyingLetterParent);
+        LetterThrower throwScript = obj.GetComponent<LetterThrower>();
+        throwScript.Init(letter, targetFoodDispensor);
+        SFXSource.PlayOneShot(keyWhosh);
+    }
     void EndGame()
     {
         gameRunning = false;
