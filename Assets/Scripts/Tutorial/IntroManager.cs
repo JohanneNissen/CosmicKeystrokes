@@ -42,6 +42,9 @@ public class IntroManager : MonoBehaviour
     public Sprite backgroundS3;
     public Sprite backgroundS4;
 
+    [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioClip bootUp;
+
     int introCount = 1;
 
     bool isPaused = true;
@@ -175,6 +178,7 @@ public class IntroManager : MonoBehaviour
                 isPaused = true;
                 introtext.text = intro3;
                 background.sprite = backgroundS2;
+                SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(false);
                 break;
             case 4:
@@ -185,15 +189,17 @@ public class IntroManager : MonoBehaviour
                 break;
             case 5:
                 isPaused = false;
-                background.sprite = backgroundS3;
                 introtext.text = intro5;
+                background.sprite = backgroundS3;
+                SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(true);
                 SetKeysLetter2();
                 break;
             case 6:
                 isPaused = true;
-                background.sprite = backgroundS4;
                 introtext.text = intro6;
+                background.sprite = backgroundS4;
+                SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(false);
                 break;
             case 7:
