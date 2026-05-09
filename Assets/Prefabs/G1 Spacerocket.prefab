@@ -144,8 +144,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::G1ManagerScript
   source: {fileID: 0}
-  ord: {fileID: 0}
-  "n\xE6steOrd": {fileID: 8300000, guid: 2a10c7a3ba051224f83135e3913dcab6, type: 3}
+  nextwordAU: {fileID: 0}
+  currentwordAU: {fileID: 0}
+  starfieldFront: {fileID: 0}
+  timer: {fileID: 0}
+  DistanceCounter: {fileID: 0}
+  flameEffect: {fileID: 0}
+  wordgenerator: {fileID: 0}
+  hashtest: {fileID: 0}
+  currentWord: 
+  minCom: 0
+  maxCom: 0
+  usedwords: []
+  Robot: {fileID: 0}
+  introText: {fileID: 0}
+  RoboHello: {fileID: 0}
+  RoboNormal: {fileID: 0}
+  RoboHappy: {fileID: 0}
+  inputField: {fileID: 0}
+  gameRunning: 0
 --- !u!114 &4534986634375194132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5824,6 +5841,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::G1DistanceCounter
   text: {fileID: 6038484111064003274}
   countSpeed: 1.1
+  gameRunning: 1
+  currentValue: 0
 --- !u!114 &225498633825072946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5838,6 +5857,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::G1Timer
   text: {fileID: 7342552507285964126}
   startTime: 11
+  distanceCounter: {fileID: 0}
+  managerScript: {fileID: 0}
+  endScreen: {fileID: 0}
+  backtext: {fileID: 0}
+  instruksText: {fileID: 0}
 --- !u!1 &8811230559796874491
 GameObject:
   m_ObjectHideFlags: 0
