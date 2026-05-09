@@ -8,7 +8,7 @@ public class Loaderintro : MonoBehaviour
         Debug.Log("enter");
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync(5);
+            SceneManager.LoadSceneAsync(4);
         }
 
 
