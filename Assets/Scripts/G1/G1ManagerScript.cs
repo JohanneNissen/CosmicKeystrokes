@@ -42,6 +42,9 @@ public class G1ManagerScript : MonoBehaviour
     public TMP_InputField inputField;
     public bool gameRunning;
 
+    public ParticleSystem burst;
+    public AudioSource burstClip;
+
     private void Awake()
     {
         hashtest = gameObject.GetComponent<HashTest>();
@@ -121,6 +124,9 @@ public class G1ManagerScript : MonoBehaviour
                 if (typedword == currentWord)
                 {
                     Debug.Log("word was correct");
+                    burst.Play();
+                    burstClip.pitch = Random.Range(.8f, 1.2f);
+                    burstClip.Play();
                     IncreaseSpeed();
                     if (maxCom < 60)
                     {
