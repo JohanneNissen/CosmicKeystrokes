@@ -1,7 +1,8 @@
-using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IntroManager : MonoBehaviour
 {
@@ -26,10 +27,10 @@ public class IntroManager : MonoBehaviour
 
     string intro1 = "Velkommen til Cosmic Keystrokes. Jeg hedder Astro, og jeg er din Robo-Guide. Som du kan se, er der ikke så meget liv i dit rumskrib lige nu. Før vi kan komme videre skal vi have startet det op. Tryk ENTER for at gå i gang med opstarten";
     string intro2 = "Først skal vi have tændt for navigations systemet. Til det skal du bruge SHIFT, CTRL, ENTER og MELLEMRUM. På dit keyboard, tryk på de fire taster for at tænde navigationen.";
-    string intro3 = "Du styrer sit rumskib med 10-fingersystemet. ";
-    string intro4 = "Tænd den venstre side af rumskibet";
-    string intro5 = "Tænd den højre side af rumskibet";
-    string intro6 = "Defend rumskib";
+    string intro3 = "Du styrer sit rumskib med 10-fingersystemet. Hver finger har en farve, som svarer til en af farverne på tastaturet. Dine fingre må kun trykke på bogstaverne som har den samme farve, mens dine tommelfingre skal trykke på mellemrum.";
+    string intro4 = "Din venstre hånd skal have fingerene sådan her: lillefinger på A, ringfinger på S, langfinger på D og pegefinger på F. Læg dine venstre fingre på tastaturet og tryk på A, S, D og F for at starte det venstre kontrolpanel.";
+    string intro5 = "Din højre hånd skal have fingerne sådan her: lillefinger på Æ, ringfinger på L, langfinger på K og pegefinger på J. Læg dine højre fingre på tastaturet og tryk på J, K, L og Æ for at starte det højre kontrolpanel.";
+    string intro6 = "Yay, nu er der gang i rumskibet igen. Hvis du glemmer hvordan du bruger 10-finger systemet kan du altid få introduktionen igen. Lad os se at komme hen til din første mission og se hvad du har lært. Tryk ENTER for at komme i gang!";
 
     public Sprite robotHappy;
     public Sprite robotNormal;
@@ -41,6 +42,9 @@ public class IntroManager : MonoBehaviour
     public Sprite backgroundS3;
     public Sprite backgroundS4;
 
+    [SerializeField] AudioSource SFXSource;
+    [SerializeField] AudioClip bootUp;
+
     int introCount = 1;
 
     bool isPaused = true;
@@ -48,6 +52,8 @@ public class IntroManager : MonoBehaviour
     bool key2Pressed = false;
     bool key3Pressed = false;
     bool key4Pressed = false;
+
+    bool justChangedState = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,15 +69,17 @@ public class IntroManager : MonoBehaviour
         {
             introCount++;
             ChangeState();
+            justChangedState = true;
+        }
+
+        if (justChangedState)
+        {
+            justChangedState = false;
+            return;
         }
 
         if (!isPaused && introCount == 2)
         {
-            if (!key2Pressed)
-            {
-                key2Back.color = Color.white;
-            }
-
             if (key1Pressed == true &&  key2Pressed == true && key3Pressed == true && key4Pressed == true)
             {
                 key1Pressed = false;
@@ -169,6 +177,8 @@ public class IntroManager : MonoBehaviour
             case 3:
                 isPaused = true;
                 introtext.text = intro3;
+                background.sprite = backgroundS2;
+                SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(false);
                 break;
             case 4:
@@ -180,13 +190,21 @@ public class IntroManager : MonoBehaviour
             case 5:
                 isPaused = false;
                 introtext.text = intro5;
+                background.sprite = backgroundS3;
+                SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(true);
                 SetKeysLetter2();
                 break;
             case 6:
                 isPaused = true;
                 introtext.text = intro6;
+                background.sprite = backgroundS4;
+                SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(false);
+                break;
+            case 7:
+                introCount = 0;
+                SceneManager.LoadSceneAsync(1);
                 break;
         }
     }
