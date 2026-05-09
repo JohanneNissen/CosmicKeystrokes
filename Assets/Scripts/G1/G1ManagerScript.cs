@@ -44,6 +44,7 @@ public class G1ManagerScript : MonoBehaviour
 
     public ParticleSystem burst;
     public AudioSource burstClip;
+    public AudioSource errorClip;
 
     private void Awake()
     {
@@ -139,6 +140,7 @@ public class G1ManagerScript : MonoBehaviour
                 else
                 {
                     Debug.Log("incorrect word");
+                    errorClip.Play();
                     DecreaseSpeed();
                     if (minCom >= 10)
                     {

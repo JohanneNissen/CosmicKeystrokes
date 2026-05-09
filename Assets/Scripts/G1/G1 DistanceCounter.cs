@@ -11,6 +11,12 @@ public class G1DistanceCounter : MonoBehaviour
 
     void Update()
     {
+        if (countSpeed > 1.1f)
+        { 
+        countSpeed = 1.1f;
+        }
+
+
         if (gameRunning == true)
         {
            
