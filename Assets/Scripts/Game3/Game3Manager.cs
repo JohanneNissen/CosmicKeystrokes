@@ -14,12 +14,12 @@ public class Game3Manager : MonoBehaviour
     public FoodDispenser fooddispenser;
     public WordGenerator wordgenerator;
 
-    public string currentword;
-    private string typedword = "";
-    private int comMin;
-    private int comMax;
+    string currentword;
+    string typedword = "";
+    int comMin;
+    int comMax;
     public List<string> usedWords;
-    private int cindex = 0;
+    int cindex = 0;
 
     //Keyboard Interface
     public TMP_Text robotText;
@@ -32,6 +32,7 @@ public class Game3Manager : MonoBehaviour
     public TMP_Text continuetext;
     public TMP_Text BigDisplaytext;
     public UnityEngine.UI.Image BigDisplayback;
+    public TMP_Text TimeDisplay;
 
     //Sound
     public AudioSource BackgroundSource;
@@ -48,7 +49,7 @@ public class Game3Manager : MonoBehaviour
     public Transform targetFoodDispensor;
 
     //Intro
-    public int introcount = 1;
+    int introcount = 1;
     string intro1 = "Velkommen til rumstationens kantine. Vores astronauter skal have en god frokost, inden de bliver sendt på mission. Desværre er vores kok blevet syg med rum-kopper. Vi skal bruge din hjælp til at lave mad til astronauterne.";
     string intro2 = "Maden bliver lavet på vores mad-printer. Hver gang maskinen skal printe en frokost skal den bruge et ord for at starte produktionen. Desværre er maskinen gammel og kan kun tage et bogstav ad gangen.";
     string intro3 = "På skærmen kan du se, hvilket bogstav maskinen skal bruge. Tryk på bogstavet på dit keyboard. Når alle bogstaverne er sendt til maskinen, kan den printe en lækker rum frokost.";
@@ -139,6 +140,14 @@ public class Game3Manager : MonoBehaviour
                     setDiff3();
                 }
             }
+        }
+
+        if (gameRunning)
+        {
+            int minutes = Mathf.FloorToInt(currentTime / 60);
+            int seconds = Mathf.FloorToInt(currentTime % 60);
+
+            TimeDisplay.text = $"{minutes:00}:{seconds:00}";
         }
 
         if (gameRunning && !musicPlaying)
@@ -293,6 +302,6 @@ public class Game3Manager : MonoBehaviour
         keyboard.gameObject.SetActive(false);
         robot.gameObject.SetActive(true);
         textbox.gameObject.SetActive(true);
-        robotText.text = end1 + acc + "% accuracy og " + totalwords + " ord skrevet. Tryk på ENTER for at gå tilbage til centralen.";
+        robotText.text = end1 + $"{acc:F0}% accuracy og " + totalwords + " ord skrevet. Tryk på ENTER for at gå tilbage til centralen.";
     }
 }
