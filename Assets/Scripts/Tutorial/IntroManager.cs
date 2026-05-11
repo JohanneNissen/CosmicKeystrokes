@@ -11,6 +11,7 @@ public class IntroManager : MonoBehaviour
     [SerializeField] TMP_Text introtext;
 
     [SerializeField] GameObject keys;
+    [SerializeField] Image colors;
     [SerializeField] Image key1;
     [SerializeField] Image key2;
     [SerializeField] Image key3;
@@ -178,12 +179,14 @@ public class IntroManager : MonoBehaviour
                 isPaused = true;
                 introtext.text = intro3;
                 background.sprite = backgroundS2;
+                colors.gameObject.SetActive(true);
                 SFXSource.PlayOneShot(bootUp);
                 keys.gameObject.SetActive(false);
                 break;
             case 4:
                 isPaused = false;
                 introtext.text = intro4;
+                colors.gameObject.SetActive(false);
                 keys.gameObject.SetActive(true);
                 SetKeysLetter1();
                 break;

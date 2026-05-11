@@ -16,7 +16,7 @@ public class KeyboardManager : MonoBehaviour
 
         foreach (Transform child in transform)
         {
-            if (child.name == "Outline" || child.name == "Display") continue;
+            if (child.name == "Outline" || child.name == "Display" || child.name == "TimeDisplay") continue;
 
             string keyName = child.name.ToUpper();
             keyDict[keyName] = child.gameObject;
