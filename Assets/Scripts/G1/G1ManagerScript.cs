@@ -194,8 +194,16 @@ public class G1ManagerScript : MonoBehaviour
 
     void DecreaseSpeed()
     {
-        DistanceCounter.countSpeed = DistanceCounter.countSpeed - 11f;
-        starfieldFront.parralax = starfieldFront.parralax + 0.2f;
+        if (DistanceCounter.countSpeed > 1.1f)
+        {
+            DistanceCounter.countSpeed = DistanceCounter.countSpeed - 11f;
+        }
+        else
+        {
+            DistanceCounter.countSpeed = 1.1f;
+        }
+
+            starfieldFront.parralax = starfieldFront.parralax + 0.2f;
 
         if (starfieldFront.parralax >= 12f)
         {
