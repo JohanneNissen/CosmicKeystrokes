@@ -1995,7 +1995,7 @@ MonoBehaviour:
   flyingLetterPrefab: {fileID: 4536086122911353558, guid: a8406a52fe5db604b94cc15367c17cfa, type: 3}
   flyingLetterParent: {fileID: 407062787}
   targetFoodDispensor: {fileID: 50245027}
-  gameTime: 120
+  gameTime: 10
   currentTime: 0
 --- !u!4 &462459535
 Transform:
