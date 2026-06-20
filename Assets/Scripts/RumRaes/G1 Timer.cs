@@ -49,7 +49,11 @@ public class G1Timer : MonoBehaviour
                 instruksText.gameObject.SetActive(false);
                 //managerScript.Robot.gameObject.SetActive(true);
                 endScreen.text = ("Tillykke, du har rejst: " + Mathf.FloorToInt(distanceCounter.currentValue).ToString() + " lysår!");
-
+                HighScoreTracker.HSTInstance.Minigame1.LastScore = Mathf.FloorToInt(distanceCounter.currentValue);
+                if (HighScoreTracker.HSTInstance.Minigame1.LastScore > HighScoreTracker.HSTInstance.Minigame1.Highscore)
+                {
+                    HighScoreTracker.HSTInstance.Minigame1.Highscore = HighScoreTracker.HSTInstance.Minigame1.LastScore;
+                }
             }
         }
 
