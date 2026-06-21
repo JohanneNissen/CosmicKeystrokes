@@ -253,7 +253,7 @@ public class Game3Manager : MonoBehaviour
 
         acc = ((float)hit / total) * 100f;
 
-        Debug.Log("Accuracy: " + acc);
+        //Debug.Log("Accuracy: " + acc);
     }
 
     public void setDiff1()
@@ -302,6 +302,19 @@ public class Game3Manager : MonoBehaviour
         keyboard.gameObject.SetActive(false);
         robot.gameObject.SetActive(true);
         textbox.gameObject.SetActive(true);
+
+        HighScoreTracker.HSTInstance.Minigame3Acc.LastScore = Mathf.RoundToInt(acc);
+        if (HighScoreTracker.HSTInstance.Minigame3Acc.LastScore > HighScoreTracker.HSTInstance.Minigame3Acc.Highscore)
+        {
+            HighScoreTracker.HSTInstance.Minigame3Acc.Highscore = HighScoreTracker.HSTInstance.Minigame3Acc.LastScore;
+        }
+        
+        HighScoreTracker.HSTInstance.Minigame3Words.LastScore = totalwords;
+        if (HighScoreTracker.HSTInstance.Minigame3Words.LastScore > HighScoreTracker.HSTInstance.Minigame3Words.Highscore)
+        {
+            HighScoreTracker.HSTInstance.Minigame3Words.Highscore = HighScoreTracker.HSTInstance.Minigame3Words.LastScore;
+        }
+
         robotText.text = end1 + $"{acc:F0}% accuracy og " + totalwords + " ord skrevet. Tryk på ENTER for at gå tilbage til centralen.";
     }
 }

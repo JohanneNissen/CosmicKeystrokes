@@ -18,6 +18,7 @@ public class SparkController : MonoBehaviour
 
     public ParticleSystem clickEffect;
 
+    public IntroController introcontroller;
 
     private void Update()
     {
@@ -164,8 +165,8 @@ public class SparkController : MonoBehaviour
 
                 if (landingOnGoal)
                 {
-
-                    SceneManager.LoadSceneAsync(1);
+                    introcontroller.gameRunning = false;
+                    introcontroller.goalReached = true;
 
                 }
 
