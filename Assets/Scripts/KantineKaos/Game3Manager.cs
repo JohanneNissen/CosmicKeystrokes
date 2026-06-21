@@ -74,7 +74,7 @@ public class Game3Manager : MonoBehaviour
     void Start()
     {
         SFXSource.volume = 0.8f;
-        BackgroundSource.volume = 0.05f;
+        BackgroundSource.volume = 0.15f;
         BackgroundSource.loop = true;
         gameRunning = false;
         keyboardmanager.ResetKeys();
@@ -152,7 +152,7 @@ public class Game3Manager : MonoBehaviour
 
         if (gameRunning && !musicPlaying)
         {
-            BackgroundSource.volume = 0.2f;
+            BackgroundSource.volume = 0.1f;
             BackgroundSource.clip = backgroundMusic;
             BackgroundSource.Play();
             musicPlaying = true;
@@ -160,7 +160,7 @@ public class Game3Manager : MonoBehaviour
 
         if (!gameRunning && musicPlaying)
         {
-            BackgroundSource.volume = 0.05f;
+            BackgroundSource.volume = 0.15f;
             BackgroundSource.clip = menuMusic;
             BackgroundSource.Play();
             musicPlaying = false;
@@ -200,6 +200,7 @@ public class Game3Manager : MonoBehaviour
             if (typedword.ToLower() == currentword.ToLower())
             {
                 totalwords++;
+                SFXSource.volume = 0.7f;
                 SFXSource.PlayOneShot(bellDing);
                 StartCoroutine(GreenFlash(displayback));
                 StartCoroutine(GreenFlash(BigDisplayback));
@@ -293,7 +294,9 @@ public class Game3Manager : MonoBehaviour
         GameObject obj = Instantiate(flyingLetterPrefab, keyTransform.position, Quaternion.identity, flyingLetterParent);
         LetterThrower throwScript = obj.GetComponent<LetterThrower>();
         throwScript.Init(letter, targetFoodDispensor);
+        SFXSource.volume = 0.2f;
         SFXSource.PlayOneShot(keyWhosh);
+
     }
     void EndGame()
     {
