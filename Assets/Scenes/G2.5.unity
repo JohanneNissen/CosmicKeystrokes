@@ -7290,6 +7290,10 @@ PrefabInstance:
       propertyPath: moveDuration
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4223176590953583618, guid: e1e89110a84473b468f452db407ed566, type: 3}
+      propertyPath: introcontroller
+      value: 
+      objectReference: {fileID: 2142172317}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2224191153738573556, guid: e1e89110a84473b468f452db407ed566, type: 3}
@@ -10450,7 +10454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -174, y: -13.819}
+  m_AnchoredPosition: {x: -174, y: -13.81897}
   m_SizeDelta: {x: 90, y: 18}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1057562210
